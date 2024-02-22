@@ -3,218 +3,451 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RAPID Form</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
-  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+  <title>Dropdown Fix</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<style>
+  body{
+    background-color: #f3f1f1;
+    font-family: 'Robot', sans-serif;
+  }
+  .card {
+    border: 1.5px solid #bdbcbc;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 0px rgb(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+  }
+  hr{
+    border-top: 1.5px solid #bdbcbc;
+  }
+  label {
+    color: #4d4d4d;
+    font-weight: 500;
+    padding-top: 10px;
+  }
+  .btn-primary {
+    background-color: #4caf4c;
+    border-color: #4caf50;
+  }
+
+</style>
 </head>
 <body>
-<div class="wrapper">
-  <nav id="sidebar">
-    <div class="sidebar-header text-center">
-        <h3 text>Panel</h3>
+
+  <br>
+
+  <div class="container-fluid">
+    <div class="card">
+        <div class="card-body">
+            <!-- i) NATURE OF THE COMPLAINT -->
+            <div class="row">
+                <div class="col-md-6">
+                    <h4 class="text-center mb-4" style="background-color: #90b5df; color:#ffffff; padding: 10px;">i) NATURE OF THE COMPLAINT</h4>
+                    <div class="dropdown">
+                        <div class="form-group">
+                            <label>The identity of complainants will be kept confidential if they request so of IFAD</label>
+                            <select class="form-control">
+                                <option value="" disabled selected>choose your option</option>
+                                <option>Complaint relating to individuals/communities believing they are or may be adversely affected by an IFAD funded project </option>
+                                <option>Complaint relating to IFAD's failure to apply its Social and Environmental Policies </option>
+                                <option>Complaint relating to IFAD's failure to apply the Mandatory Aspects of </option>
+                            </select>
+                        </div>
+                    </div>
+               <br>
+                    <div class="dropdown">
+                        <div class="form-group">
+                            <label>CHOOSE SECAP</label>
+                            <select class="form-control">
+                                <option value="" disabled selected>choose your option</option>
+                                <option>YES</option>
+                                <option>NO</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h4 class="text-center mb-4" style="background-color: #90b5df; color:#ffffff; padding: 10px;">ii) COMPLAINANTS INFORMATION</h4>
+                    <form action="/action_page.php">
+                        <label for="quantity">a) How many Complainants are you? (You must be 2 in order for the Complaint to be admissible)</label>
+                        <input type="number" id="quantity" name="quantity" min="2" placeholder="Enter number">
+                    </form>
+               <br>
+                    <div class="form-group">
+                        <label>b) Are you nationals of the concerned country or living in the area? (Complainants must be nationals of the country concerned and/or living in the project area)</label>
+                        <select class="form-control">
+                            <option value="" disabled selected>choose your option</option>
+                            <option>YES</option>
+                            <option>NO</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+      <br>
+            <!-- iii) CONFIDENTIALITY -->
+            <h4 class="text-center mb-4" style="background-color: #90b5df; color:#ffffff; padding: 10px;">iii) CONFIDENTIALITY</h4>
+            <div class="form-group">
+                <label>a) The identity of complainants will be kept confidential if they request so of IFAD</label>
+                <select class="form-control">
+                    <option value="" disabled selected>choose your option</option>
+                    <option>YES</option>
+                    <option>NO</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>b) Do you want your identity to be kept confidential?</label>
+                <select class="form-control">
+                    <option value="" disabled selected>choose your option</option>
+                    <option>YES</option>
+                    <option>NO</option>
+                </select>
+            </div>
+            <div>
+                <label>c) If YES, please state why. If NO, please avail your details below</label>
+                <input type="text" class="form-control">
+            </div>
+        </div>
     </div>
+</div>
 
-    <ul class="list-unstyled components">
-        <li>
-            <a href="Sidebar.html">Home</a>
-        </li>
-        <li>
-            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Track Progress</a>
-            <ul class="collapse list-unstyled" id="pageSubmenu">
-                <li>
-                    <a href="Form.html">Form</a>
-                </li>
-                <li>
-                    <a href="#">Dashboard</a>
-                </li>
-            </ul>
-        </li>
-    </ul>
-</nav>
 
-  <div id="content">
+<br>
+
   
   <div class="container-fluid">
-    <div class="row justify-content-center">
-      <div class="col-lg-12">
-        <div>
-          <div class="card-body">
-            <div class="text-center mb-4">
-              <h4 style="background-color: #90b5df; color: #fff; padding: 10px;">FORM</h4>
-            </div>            
-            <div class="row">
-              <div class="col-md-6">
-                <div class="card mb-4">
-                  <div class="card-body">
-                    <h5 class="card-title text-center" style="background-color: #90b5df; color: white; padding: 5px;"> Project Logframe Alignment</h5>
-                    <hr>
-                    <div class="form-group">
-                      <label for="logFrame">(Reflect Indicator Number)</label>
-                      <input type="text" class="form-control" id="logFrame" placeholder="Enter text" style="background-color:ghostwhite;" required>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="card mb-4">
-                  <div class="card-body">
-                    <h5 class="card-title text-center" style="background-color: #90b5df; color: white; padding: 5px;">AWPB Alignment</h5>
-                    <hr>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label for="dropdown-AWPB">Indicate Number of AWPB Activity</label>
-                          <select class="form-control" id="AWPB" style="background-color:ghostwhite;" required>
-                            <option value="" disabled selected>Choose your option</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label for="dropdown-reflect_i">Reflect Corresponding Indicator Number</label>
-                          <select class="form-control" id="reflect_i" style="background-color:ghostwhite;" required>
-                            <option value="" disabled selected>Choose your option</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>                    
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div class="card mb-4">
-              <div class="card-body">
-                <h5 class="card-title text-center" style="background-color: #90b5df; color: white; padding: 5px;">Output</h5>
-                <hr>
-                <div>
-                  <div class="form-group">
-                    <div class="col-md">
-                        <label for="act_title">Activity Title</label>
-                        <input type="text" class="form-control" id="act_title" placeholder="Enter title" style="background-color: ghostwhite;" required>
-                    </div>
-                </div>
-                <hr>
-                  <div class="form-row">
-                    <div class="col-md-6" style="margin-right: 10px;">
-                        <h5 class="card-title text-center mb-2" style="margin-top: 20px;">Participants (if applicable)</h5> 
-                        <div class="form-group">
-                            <label for="POA">Profile of Attendees (e.g., RCUs, RPCs, MSMEs, FOs, etc.)</label>
-                            <input type="text" class="form-control" id="POA" placeholder="Enter Profile" style="background-color: ghostwhite;" required>
-                        </div>
-                        <div class="form-row">
-                            <div class="col-md">
-                                <label for="Males">Male</label>
-                                <input type="number" class="form-control" id="Males" min="0" placeholder="Enter number" style="background-color: ghostwhite;" required>
-                            </div>
-                            <div class="col-md">
-                                <label for="Females">Female</label>
-                                <input type="number" class="form-control" id="Females" min="0" placeholder="Enter number" style="background-color: ghostwhite;" required>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="col-md">
-                                <label for="IP">IP</label>
-                                <input type="number" class="form-control" id="IP" min="0" placeholder="Enter number" style="background-color: ghostwhite;" required>
-                            </div>
-                            <div class="col-md">
-                                <label for="Youth">Youth</label>
-                                <input type="number" class="form-control" id="Youth" min="0" placeholder="Enter number" style="background-color: ghostwhite;" required>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="col-md">
-                                <label for="PWD">PWD</label>
-                                <input type="number" class="form-control" id="PWD" min="0" placeholder="Enter number" style="background-color: ghostwhite;" required>
-                            </div>
-                        </div>
-                    </div>
-                
-                    <div class="col-md" style="margin-left: 10px;">
-                      <div class="form-row" style="margin-top: 50px;">
-                        <div class="col-md">
-                            <label for="Date">Actual Date</label>
-                            <input type="date" class="form-control" id="Date" min="0" placeholder="Choose Date" style="background-color: ghostwhite;" required>
-                        </div>
-                        <div class="col-md">
-                            <label for="Venue">Venue</label>
-                            <input type="text" class="form-control" id="Venue" min="0" placeholder="Enter Venue" style="background-color: ghostwhite;" required>
-                        </div>
-                    </div>
-                    <div class="form-row" style="margin-top: 20px;">
-                      <div class="col-md">
-                          <label for="Resource">Resource Person</label>
-                          <input type="text" class="form-control" id="Resource" min="0" placeholder="Enter resource person" style="background-color: ghostwhite;" required>
-                      </div>
-                      <div class="col-md">
-                          <label for="NPCO">NPCO Lead Person/Unit</label>
-                          <input type="text" class="form-control" id="NPCO" min="0" placeholder="Enter lead Person" style="background-color: ghostwhite;" required>
-                      </div>
-                  </div>                    
-                        <div class="form-group row">
-                            <div class="col-md">
-                                <label for="UB">Utilized Budget (estimated)</label>
-                                <input type="number" class="form-control" id="UB" min="0" placeholder="Enter estimated budget" style="background-color: ghostwhite;" required>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                
-                <div class="form-group mt-3">
-                  <label for="act_outputs">Activity Outputs/Highlights (vs. planned outputs/objectives, include issues/concerns requiring NPCO action)</label>
-                  <input class="form-control" id="act_outputs" placeholder="Enter Activity" style="background-color:ghostwhite;" required></input>
-                </div>
-                <div class="row mt-3">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="other">Other Remarks</label>
-                      <input class="form-control" id="other" placeholder="Enter Remarks" style="background-color:ghostwhite;" required></input>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="MOV">Submitted MOVs</label>
-                      <input class="form-control" id="MOV" placeholder="Enter MOV" style="background-color:ghostwhite;" required></input>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-6">
+            <h4 class="text-center mb-4" style="background-color: #90b5df; color:#ffffff; padding: 10px;">iv) COMPLAINANTS' INFORMATION a COMPLAINANT 1</h4>
+            <!-- Complainant 1 information -->
+            <label>FULL NAME</label>
+            <input type="text" class="form-control" placeholder="Enter Name">
+    
+          <br>
+    
+            <label>TITLE</label>
+            <input type="text" class="form-control" placeholder="Enter Title">
+    
+          <br>
+    
+            <label>ORGANISATION</label>
+            <input type="text" class="form-control" placeholder="Enter Organisation">
+    
+          <br>
+    
+            <label>PHONE NUMBER</label>
+            <input type="tel" class="form-control" placeholder="(+63XX XXXX XXX)" maxlength="11" id="num">
+    
+          <br>
+    
+            <label>EMAIL</label>
+            <input type="email" class="form-control" placeholder="Enter Email">
           </div>
-          <div class="text-right">
-            <button type="submit" class="btn btn-primary" style="width: 150px; font-size: 18px; font-weight: bold;">Submit</button>
-          </div>
+          <div class="col-md-6">
+            <h4 class="text-center mb-4" style="background-color: #90b5df; color:#ffffff; padding: 10px;">LOCATION</h4>
+    
+            <label>YOUR ADDRESS/ LOCATION</label>
+            <input type="text" class="form-control" placeholder="Enter Addresss/Location">
+    
+          <br>
+    
+            <label>MAILING ADDRESS (IF DIFFERENT)</label>
+            <input type="text" class="form-control" placeholder="Enter Mailing Address">
+    
+          <br>
+    
+            <label>ADDITIONAL GUIDANCE ON HOW TO LOCATE YOU (IF APPLICABLE)</label>
+            <input type="text" class="form-control" placeholder="Enter Additional Guidance">
           </div>
         </div>
       </div>
     </div>
-   </div>
   </div>
+  
+  <br>
+
+  <div class="container-fluid">
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-6">
+            <h4 class="text-center mb-4" style="background-color: #90b5df; color:#ffffff; padding: 10px;">b) COMPLAINANT 2</h4>
+            <!-- Complainant 2 information -->
+            <label>FULL NAME</label>
+            <input type="text" class="form-control" placeholder="Enter Name">
+    
+          <br>
+    
+            <label>TITLE</label>
+            <input type="text" class="form-control" placeholder="Enter Title">
+    
+          <br>
+    
+            <label>ORGANISATION</label>
+            <input type="text" class="form-control" placeholder="Enter Organisation">
+    
+          <br>
+    
+            <label>PHONE NUMBER</label>
+            <input type="tel" class="form-control" placeholder="(+63XX XXXX XXX)" maxlength="11" id="num">
+    
+          <br>
+    
+            <label>EMAIL</label>
+            <input type="email" class="form-control" placeholder="Enter Email">
+          </div>
+            <div class="col-md-6">
+            <h4 class="text-center mb-4" style="background-color: #90b5df; color:#ffffff; padding: 10px;">LOCATION</h4>
+    
+            <label>YOUR ADDRESS/ LOCATION</label>
+            <input type="text" class="form-control" placeholder="Enter Addresss/Location">
+    
+          <br>
+    
+            <label>MAILING ADDRESS (IF DIFFERENT)</label>
+            <input type="text" class="form-control" placeholder="Enter Mailing Address">
+    
+          <br>
+    
+            <label>ADDITIONAL GUIDANCE ON HOW TO LOCATE YOU (IF APPLICABLE)</label>
+            <input type="text" class="form-control" placeholder="Enter Additional Guidance">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+    <br>
+  
+  <div class="container-fluid">
+    <div class="card">
+       <div class="container"> 
+           <div class="col-md-12">         
+              <div class="card-body">
+                  <div class="container">
+                      <p class="text-center" style="background-color: #90b5df; color:#ffffff;  padding: 10px;">Please provide the names and/or description of other individuals or groups that support the complaint (If any):</p>
+                      <div class="table-responsive">
+                          <table class="table table-bordered">
+                              <thead>
+                                  <tr>
+                                      <th>Firstname</th>
+                                      <th>Lastname</th>
+                                      <th>Title/Affiliation</th>
+                                      <th>Contact Information</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr>
+                                      <td><input type="name"></td>
+                                      <td><input type="name"></td>
+                                      <td><input type="name"></td>
+                                      <td><input type="name"></td>
+                                  </tr>
+                                  <tr>
+                                    <td><input type="name"></td>
+                                    <td><input type="name"></td>
+                                    <td><input type="name"></td>
+                                    <td><input type="name"></td>
+                                  </tr>
+                                  <tr>
+                                    <td><input type="name"></td>
+                                    <td><input type="name"></td>
+                                    <td><input type="name"></td>
+                                    <td><input type="name"></td>
+                                  </tr>
+                                  <tr>
+                                    <td><input type="name"></td>
+                                    <td><input type="name"></td>
+                                    <td><input type="name"></td>
+                                    <td><input type="name"></td>
+                                  </tr>
+                                  <tr>
+                                    <td><input type="name"></td>
+                                    <td><input type="name"></td>
+                                    <td><input type="name"></td>
+                                    <td><input type="name"></td>
+                                  </tr>
+                                  <tr>
+                                    <td><input type="name"></td>
+                                    <td><input type="name"></td>
+                                    <td><input type="name"></td>
+                                    <td><input type="name"></td>
+                                  </tr>
+                                  <tr>
+                                    <td><input type="name"></td>
+                                    <td><input type="name"></td>
+                                    <td><input type="name"></td>
+                                    <td><input type="name"></td>
+                                  </tr>
+                                  <!-- More rows as needed -->
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+          </div> 
+      </div>
+   </div>
 </div>
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="style.css">
 
-  <script type="text/javascript">
-    $(document).ready(function () {
-        $('#sidebarCollapse').on('click', function () {
-            $('#sidebar').toggleClass('active');
-        });
-    });
-</script>
+<br>
 
+  <div class="container-fluid"> 
+    <div class="card mb-4">
+      <div class="card-body">
+        <h4 class="text-center mb-4" style="background-color: #90b5df; color:#ffffff; padding: 10px;">v) IFAD PROJECT/PROGRAMME OF CONCERN AND NATURE OF CONCERN</h4>
+        <label>a) Which IFAD-supported project/programme are you concerned about? (please provide the Project/Programme name, if known):</label>
+        <input type="text" class="form-control">
+        <label>b) Please provide a short description of your concerns about the project/programme.  Please describe, as well, the types of Environmental and Social impacts that may occur, or have occurred, as a result.</label>
+        <textarea class="form-control mb-2" rows="3" placeholder="Enter text"></textarea>
+        <label>c) When did the situation that raised your concerns start developing? (Please note that complaints must concern projects/programmes currently under design/implementation. Complaints concerning projects/programmes that preceded the operationalization of SECAP in 1/1/2015, projects that have been closed for a period of 24 months or more will not be eligible).</label>
+        <textarea class="form-control mb-2" rows="3" placeholder="Enter text"></textarea>
+      </div>
+    </div> 
+  </div>
+  
+  <br>
+
+  <div class="container-fluid"> 
+       <!-- vi) PROJECT LEVEL -->
+       <div class="card mb-4">
+        <div class="card-body">
+          <h4 class="text-center mb-4" style="background-color: #90b5df; color:#ffffff;  padding: 10px;">vi) PROJECT LEVEL</h4>
+          <!-- Input fields for project level concerns -->
+      
+          <div>
+            <label>a) Have you raised your complaint with government representatives or NGO(s) responsible for planning or executing the project or programme or the Lead Agency or any governmental body with the responsibility of overseeing the Lead Agency? (The complaint should first be brought to the above authorities. If they do not respond then the matter may be brought to IFAD's attention. The complaint may be brought directly to IFAD if the complainants feel they may be subject to retaliation).</label>
+            <select class="form-control">
+              <option value="" disabled selected>choose your option</option>
+              <option>YES</option>
+              <option>NO</option>
+            </select>
+          
+      
+              <div class="table-responsive">
+                  <table class="table table-bordered">
+                      <thead>
+                          <tr>
+                              <th>Firstname</th>
+                              <th>Lastname</th>
+                              <th>Title/Affiliation</th>
+                              <th>Estimated Date of Contact</th>
+                              <th>Nature of Communication</th>
+                              <th>Response from the Individual</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td><input type="name"></td>
+                              <td><input type="name"></td>
+                              <td><input type="name"></td>
+                              <td><input type="date"></td>
+                              <td><input type="name"></td>
+                              <td><input type="name"></td>
+                          </tr>
+                          <tr>
+                              <td><input type="name"></td>
+                              <td><input type="name"></td>
+                              <td><input type="name"></td>
+                              <td><input type="date"></td>
+                              <td><input type="name"></td>
+                              <td><input type="name"></td>
+                          </tr>
+                          <tr>
+                              <td><input type="name"></td>
+                              <td><input type="name"></td>
+                              <td><input type="name"></td>
+                              <td><input type="date"></td>
+                              <td><input type="name"></td>
+                              <td><input type="name"></td>
+                          </tr>
+                          <tr>
+                              <td><input type="name"></td>
+                              <td><input type="name"></td>
+                              <td><input type="name"></td>
+                              <td><input type="date"></td>
+                              <td><input type="name"></td>
+                              <td><input type="name"></td>
+                          </tr>
+                          <!-- More rows can be added here if needed -->
+                      </tbody>
+                  </table>
+              </div>
+          
+              <div>
+                  <label>b) Please explain why, if the response or actions taken are not satisfactory.</label>
+                  <input type="text" class="form-control" placeholder="Enter Text">
+              </div>
+          
+          <br>
+          
+              <div>
+                  <label>c) How do you wish to see the complaint resolved? Do you have any other matters, evidence, or facts (including supporting documents) that you would like to share?</label>
+                  <input type="text" class="form-control" placeholder="Enter Text">
+              </div>
+          
+          
+      
+               <div>
+                  <label>b) Please explain why, if the response or actions taken are not satisfactory.</label>
+                  <input type="text" class="form-control" placeholder="Enter Text">
+              </div>
+      
+          <br>
+      
+               <div>
+                  <label>c) How do you wish to see the complaint resolved? Do you have any other matters, evidence or facts (including supporting documents) that you would like to share?</label>
+                  <input type="text" class="form-control" placeholder="Enter Text">
+             </div>
+           </div>
+         </div>
+       </div>
+     </div> 
+
+<br>
+
+  <!-- vii) IFAD Level -->
+  <div class="container-fluid"> 
+      <div class="card mb-4">
+        <div class="card-body">
+            <h4 class="text-center mb-4" style="background-color: #90b5df; color:#ffffff;  padding: 10px;">vii) IFAD Level</h4>
+            <!-- Input fields for IFAD level concerns -->
+            
+                <div class="form-group">
+                    <label>a) Do you disagree with the response from the IFAD Country team and Regional Division in relation to your complaint?</label>
+                    <select class="form-control">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option>YES</option>
+                        <option>NO</option>
+                    </select>
+                </div>
+            
+            <label>b) Please provide the details of the response from the IFAD Country Team and Regional Division in relation to your complaint</label>
+            <textarea class="form-control mb-2" placeholder="Enter Text"></textarea>
+            <label>c) Please explain why, if the response or actions taken are not satisfactory</label>
+            <textarea class="form-control mb-2" placeholder="Enter Text"></textarea>
+            <label>d) How do you wish to see the complaint resolved? </label>
+            <textarea class="form-control mb-2" placeholder="Enter Text"></textarea>
+            <label>e) Do you have any other matters or facts (including supporting documents) that you would like to share?</label>
+            <textarea class="form-control mb-2" placeholder="Enter Text"></textarea>
+      </div>
+    </div>
+  </div>
+
+    <div class="text-center">
+        <button type="submit" class="btn btn-primary" style="width: 200px; font-size: 20px; font-weight: bold;">SUBMIT</button>
+    </div>
+    
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script>
+    function updateTextbox(containerId, element) {
+      document.getElementById(containerId).innerText = element.innerText;
+    }
+  </script>
 </body>
 </html>
