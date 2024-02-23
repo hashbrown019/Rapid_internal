@@ -26,10 +26,21 @@
                     <a href="Sidebar.html">Home</a>
                 </li>
                 <li>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Track Progress</a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <a href="#page_Submenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Track Progress</a>
+                    <ul class="collapse list-unstyled" id="page_Submenu1">
                         <li>
                             <a href="Form.html">Form</a>
+                        </li>
+                        <li>
+                            <a href="#">Dashboard</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#page_Submenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">IFAD Complaints</a>
+                    <ul class="collapse list-unstyled" id="page_Submenu2">
+                        <li>
+                            <a href="#">Form</a>
                         </li>
                         <li>
                             <a href="#">Dashboard</a>
@@ -40,36 +51,15 @@
         </nav>
 
         <div id="content">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-
-                    <button type="button" id="sidebarCollapse" class="btn btn-info">
-                        <i class="fas fa-align-left"></i>
-                        <span>Menu</span>
-                    </button>
-
-                </div>
-            </nav>
-
-            <h2>Sidebar</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-            <div class="line"></div>
-
-            <h2>Lorem Ipsum Dolor</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-            <div class="line"></div>
-
-            <h2>Lorem Ipsum Dolor</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-            <div class="line"></div>
-
-            <h3>Lorem Ipsum Dolor</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
+          <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <div class="container-fluid">
+                <button type="button" id="sidebarCollapse" class="btn btn-info">
+                    <i class="fas fa-align-left"></i>
+                    <span>Menu</span>
+                </button>
+            </div>
+        </nav>        
+          </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -77,12 +67,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
     <script type="text/javascript">
-        $(document).ready(function () {
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').toggleClass('active');
-            });
+        document.getElementById("sidebarCollapse").addEventListener("click", function() {
+            document.getElementById("sidebar").classList.toggle("active");
         });
     </script>
+
 </body>
 
 </html>
