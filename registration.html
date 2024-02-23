@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Your Bootstrap Project</title>
+
+    <style>
+
+        select.custom-select::placeholder {
+            font-size: 10px; 
+            color: #999; 
+            background-color: ghostwhite;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container mt-2">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Register Here</h4>
+                    </div>
+                    <div class="card-body">
+                        <form action="submit_form.php" method="post">
+                            <div class="form-row">
+                                <div class="form-group col-md-5">
+                                    <label for="lastName">Last Name:</label>
+                                    <input type="text" class="form-control" id="lastName" name="lastName" style="background-color: ghostwhite;" required>
+                                </div>
+
+                                <div class="form-group col-md-5">
+                                    <label for="firstName">First Name:</label>
+                        
+                                    <input type="text" class="form-control" id="firstName" name="firstName" style="background-color: ghostwhite;" required>
+                                </div>
+
+                                <div class="form-group col-md-2">
+                                    <label for="initial"> Initial: </label>
+                                    <input type="text" class="form-control" id="initial" name="Initial" style="background-color: ghostwhite;" required>
+                                </div>
+                            </div>
+
+                            </div>
+
+                            <div class="form-row align-items-center col-md-12" >
+                                <div class="form-group col-md-12">
+                                    <label for="streetAddress">Address:</label>
+                                    <input type="text" class="form-control" id="streetAddress" name="streetAddress" placeholder="Street Address" style="background-color: ghostwhite;" required>
+                                </div>
+                            
+                                <div class="form-group col-md-12">
+                                    <label for="city">City:</label>
+                                    <input type="text" class="form-control" id="city" name="city" placeholder="City" style="background-color: ghostwhite;">
+                                </div>
+                            
+                                <div class="form-group col-md-6">
+                                    <label for="state">State:</label>
+                                    <input type="text" class="form-control" id="state" name="state" placeholder="State" style="background-color: ghostwhite;" required>
+                                </div>
+                            
+                                <div class="form-group col-md-6">
+                                    <label for="zipcode">Zipcode:</label>
+                                    <input type="text" class="form-control" id="zipcode" name="zipcode" placeholder="Zipcode" pattern="[0-9]+" style="background-color: ghostwhite;" required>
+                                </div>
+                            </div>
+
+                     <div class="card-body">
+                                <form action="submit_form.php" method="post">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="gender">Email:</label>
+                                            <input type="email" class="form-control" id="email" name="email" style="background-color: ghostwhite;" required>
+                                        </div>
+        
+                                    
+        
+                                        <div class="form-group col-md-6">
+                                            <label for="phoneNumber">Mobile Number:</label>
+                                            <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="e.g. 0000-000-0000" required style="background-color: ghostwhite;" style="height: 40px;" pattern="[0-9]+">
+                                        </div>
+                                  
+                                </div>
+                                    
+                                    
+                        <div class="form-group col-md-13">
+                                <label for="job">Designation:</label>
+                                <input type="job" class="form-control" id="job" name="job" style="background-color: ghostwhite;" required>
+                            </div>
+
+                            <div class="card-body">
+                                <form action="submit_form.php" method="post">
+                                    <div class="form-row col-md-12">
+                                        <div class="form-group col-md-6">
+                                            <label for="status">RCU:</label>
+                                            <select class="form-control" id="rcu" name="rcu" style="font-size: 12px; height: 40px; background-color: ghostwhite;" required>
+                                                <option value="" disabled selected>Select option</option>
+                                                <option value="8">Region VIII - Eastern Visayas</option>
+                                                <option value="9">Region IX - Zamboanga Peninsula</option>
+                                                <option value="10">Region X- Northern Mindanao</option>
+                                                <option value="11">Region XI - Davao Region</option>
+                                                <option value="12">Region XII - SOCCSKSARGEN</option>
+                                                <option value="13">Region XIII - Caraga</option>
+                                                <option value="barmm">BARMM</option>
+                                            </select>
+                                        </div>
+
+                                        
+            
+                                        <div class="form-group col-md-6">
+                                            <label for="status">PCU:</label>
+                                            <select class="form-control" name="pcu" style="font-size: 12px; height: 40px; background-color: ghostwhite;" required>
+                                                <option value="" disabled selected>Select option</option>
+                                                <option value="northern samar">Region VIII - Eastern Visayas</option>
+                                                <option value="leyte">Region IX - Zamboanga Peninsula</option>
+                                                <option value="southern leyte">Region X- Northern Mindanao</option>
+                                                <option value="zamboanga del norte">Region XI - Davao Region</option>
+                                                <option value="zamboanga sibugay">Region XII - SOCCSKSARGEN</option>
+                                                <option value="zamboanga del sur">Region XIII - Caraga</option>
+                                                <option value="misamis oriental">BARMM</option>
+                                                <option value="bukidnon">Bukidnon</option>
+                                                <option value="lanao del norte">Lanao del Norte</option>
+                                                <option value="davao de oro">Lanao de Oro</option>
+                                                <option value="davao oriental">Davao Oriental</option>
+                                                <option value="davao del norte">Davao del Norte</option>
+                                                <option value="davao del sur">Davao del Sur</option>
+                                                <option value="davao occidental">Davao Occidental</option>
+                                                <option value="north cotobato">North Cotobato</option>
+                                                <option value="sultan kudarat">Sultan Kudarat</option>
+                                                <option value="sarangani">Sarangani</option>
+                                                <option value="agusan del norte">Agusan del Norte</option>
+                                                <option value="agusan del sur">Agusan del Sur</option>
+                                                <option value="surigao del sur">Surigao del Sur</option>
+                                                <option value="maguindanao">Maguindanao</option>
+            
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                            
+
+                            <div class="form-group col-md-13">
+                                <label for="username">Username:</label>
+                                <input type="text" class="form-control" id="username" name="username" style="background-color: ghostwhite;" required>
+                            </div>
+
+
+                            <div class="form-group col-md-13">
+                                <label for="password">Password:</label>
+                                <div class="input-group">
+                                    <input type="password" class="form-control" id="password" style="background-color: ghostwhite;" required>
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="button" id="togglePassword" onclick="__togglePassword('password', 'eyeIcon1')">
+                                            <i class="fas fa-eye" id="eyeIcon1"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group col-md-13">
+                                <label for="confirmPassword">Confirm Password:</label>
+                                <div class="input-group">
+                                    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"  style="background-color: ghostwhite;" required>
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="button" id="toggleconfirmPassword" onclick="__togglePassword('confirmPassword', 'eyeIcon2')">
+                                            <i class="fas fa-eye" id="eyeIcon2"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <label for="dropdown">&nbsp; &nbsp; &nbsp;</label>
+                                
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="dateInput">Until:</label>
+                                        <input type="date" id="dateInput" name="dateInput" class="form-control" style="font-size: 12px; height: 40px; background-color: ghostwhite;" required>
+                                    </div>
+                                
+                                    <div class="form-group col-md-6">
+                                        <label for="dropdown">Status:</label>
+                                        <select id="dropdown" name="dropdown" class="form-control"  style="font-size: 12px; height: 40px; background-color: ghostwhite;" required>
+                                            <option value="" disabled selected>Select option</option>
+                                            <option value="option1">Option 1</option>
+                                            <option value="option2">Option 2</option>
+                                            <option value="option3">Option 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            
+                        </div>
+
+                            
+                            <button type="submit" class="btn btn-primary">Sign Up</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+      
+        function __togglePassword(inputId, eyeIconId) {
+            var passwordInput = document.getElementById(inputId);
+            var eyeIcon = document.getElementById(eyeIconId);
+    
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                eyeIcon.classList.remove("fa-eye");
+                eyeIcon.classList.add("fa-eye-slash");
+            } else {
+                passwordInput.type = "password";
+                eyeIcon.classList.remove("fa-eye-slash");
+                eyeIcon.classList.add("fa-eye");
+            }
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
