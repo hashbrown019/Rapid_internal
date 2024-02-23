@@ -221,17 +221,22 @@ label {
     margin-left: 0;
 }
 
-.sidebar-logout-position {
-    height: 50px;
+#sidebar .logout-btn {
     cursor: pointer;
     display: flex;
     align-items: center;
-    padding: 0px 12px;
     text-align: left;
     position: absolute;
     bottom: 0; 
     left: 0; 
     right: 0; 
     z-index: 1; 
-    padding-bottom: 15px;
   }
+
+  .list-unstyled.components li a i {
+    padding-right: 10px;
+}
+
+.icon-text {
+    margin-left: 10px;
+}
