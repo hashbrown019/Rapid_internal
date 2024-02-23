@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dropdown Fix</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+<style>
+  body{
+    font-family: 'Robot', sans-serif;
+  }
+  .card {
+    border: 1.5px solid #bdbcbc;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 0px rgb(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+  }
+  hr{
+    border-top: 1.5px solid #bdbcbc;
+  }
+  label {
+    color: #4d4d4d;
+    font-weight: 500;
+    padding-top: 10px;
+  }
+  .btn-primary {
+    background-color: #4caf4c;
+    border-color: #4caf50;
+  }
+
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <nav id="sidebar">
+    <div class="sidebar-header text-center">
+        <h3 text>Panel</h3>
+    </div>
+
+    <ul class="list-unstyled components">  
+        <li>
+            <a href="Sidebar.html">Home</a>
+        </li>
+        <li>
+            <a href="#page_Submenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Track Progress</a>
+            <ul class="collapse list-unstyled" id="page_Submenu1">
+                <li>
+                    <a href="Form.html">Form</a>
+                </li>
+                <li>
+                    <a href="#">Dashboard</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#page_Submenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">IFAD Complaints</a>
+            <ul class="collapse list-unstyled" id="page_Submenu2">
+                <li>
+                    <a href="IFAD.html">Form</a>
+                </li>
+                <li>
+                    <a href="#">Dashboard</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<div id="content">
+  <div class="card-body">
+  <h4 class="text-center" style="background-color: #90b5df; color:#ffffff; padding: 10px;">IFAD Complaints procedure & the enhanced complaints procedure submission form </h4>
+  <div class="text-center mb-4">
+    <label>Alleged non-compliance with its social and environmental policies and mandatory aspects of its social, environmental and climate assessment procedures (SECAP)</label>
+  </div>
+
+  <nav class="navbar navbar-expand-md navbar-light bg-light" style="padding: 10px; margin-left: 0px;">
+    <div class="container-fluid">
+        <button type="button" id="sidebarCollapse" class="btn btn-info">
+            <i class="fas fa-align-left"></i>
+            <span>Menu</span>
+        </button>
+    </div>
+</nav>
+  <br>
+
+  <div class="container-fluid">
+    <div class="card">
+        <div class="card-body">
+            <!-- i) NATURE OF THE COMPLAINT -->
+            <div class="row">
+                <div class="col-md-6">
+                    <h4 class="text-center mb-4" style="background-color: #90b5df; color:#ffffff; padding: 10px;">I. Nature of The Complaint</h4>
+                    <div class="dropdown">
+                        <div class="form-group">
+                            <label>What complaint are you making to IFAD? (Choose the one(s) applicable to your complaint)</label>
+                            <select class="form-control" id="AMPB" style="background-color: ghostwhite;" required>
+                                <option value="" disabled selected>choose your option</option>
+                                <option>Complaint relating to individuals/communities believing they are or may be adversely affected by an IFAD funded project </option>
+                                <option>Complaint relating to IFAD's failure to apply its Social and Environmental Policies </option>
+                                <option>Complaint relating to IFAD's failure to apply the Mandatory Aspects of </option>
+                            </select>
+                        </div>
+                    </div> 
+               <br>
+                    <div class="dropdown">
+                        <div class="form-group">
+                            <label>Choose SECAP</label>
+                            <select class="form-control" style="background-color: ghostwhite;" required>
+                                <option value="" disabled selected>choose your option</option>
+                                <option>SECAP 2015</option>
+                                <option>SECAP 2017</option>
+                                <option>SECAP 2021</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h4 class="text-center mb-4" style="background-color: #90b5df; color:#ffffff; padding: 10px;">II. Complainants Information</h4>
+                    <form action="/action_page.php">
+                        <label for="quantity">a) How many Complainants are you? (You must be 2 in order for the Complaint to be admissible)</label>
+                        <input type="number" id="quantity" name="quantity" min="2" placeholder="Enter number" class="form-control" style="background-color: ghostwhite;" required>
+                    </form>
+               <br>
+                    <div class="form-group">
+                        <label>b) Are you nationals of the concerned country or living in the area? (Complainants must be nationals of the country concerned and/or living in the project area)</label>
+                        <select class="form-control" style="background-color: ghostwhite;" required>
+                            <option value="" disabled selected>choose your option</option>
+                            <option>YES</option>
+                            <option>NO</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+      <br>
+            <!-- iii) CONFIDENTIALITY -->
+            <h4 class="text-center mb-4" style="background-color: #90b5df; color:#ffffff; padding: 10px;">III. Confidentiality</h4>
+            <div class="row">
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label for="option-a">a) The identity of complainants will be kept confidential if they request so of IFAD</label>
+                      <select id="option-a" class="form-control" style="background-color: ghostwhite;" required>
+                          <option value="" disabled selected>choose your option</option>
+                          <option>YES</option>
+                          <option>NO</option>
+                      </select>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label for="option-b">b) Do you want your identity to be kept confidential?</label>
+                      <select id="option-b" class="form-control" style="background-color: ghostwhite;" required>
+                          <option value="" disabled selected>choose your option</option>
+                          <option>YES</option>
+                          <option>NO</option>
+                      </select>
+                  </div>
+              </div>
+          </div>
+            <div>
+                <label>c) If YES, please state why. If NO, please avail your details below</label>
+                <input type="text" class="form-control" style="background-color: ghostwhite;" required placeholder="Enter text">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<br>
+
+  
+  <div class="container-fluid">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="text-center mb-4" style="background-color: #90b5df; color:#ffffff; padding: 10px;">IV. Complainants' information</h4>
+        <div class="row">
+          <div class="col-md-6">
+            <h4 class="text-center mb-4" style="background-color: #90b5df; color:#ffffff; padding: 10px;">A) Complainant 1</h4>
+            <!-- Complainant 1 information -->
+            <div class="row">
+              <div class="col-md-6">
+                  <label>Full Name</label>
+                  <input type="text" class="form-control" placeholder="Enter Name" style="background-color: ghostwhite;" required>
+              </div>
+              <div class="col-md-6">
+                  <label>Title</label>
+                  <input type="text" class="form-control" placeholder="Enter Title" style="background-color: ghostwhite;" required>
+              </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-md-6">
+                <label>Organisation</label>
+                <input type="text" class="form-control" placeholder="Enter Organisation" style="background-color: ghostwhite;" required>
+            </div>
+            <div class="col-md-6">
+                <label>Phone Number</label>
+                <input type="tel" class="form-control" placeholder="(+63XX XXXX XXX)" maxlength="11" id="num" style="background-color: ghostwhite;" required>
+            </div>
+        </div>        
+    
+            <label>Email</label>
+            <input type="email" class="form-control" placeholder="Enter Email" style="background-color: ghostwhite;" required>
+          </div>
+          <div class="col-md-6">
+            <h4 class="text-center mb-4" style="background-color: #90b5df; color:#ffffff; padding: 10px;">Location</h4>
+    
+            <label>Your address/location</label>
+            <input type="text" class="form-control" placeholder="Enter Addresss/Location" style="background-color: ghostwhite;" required>
+    
+            <label>Mailing Address (if different)</label>
+            <input type="text" class="form-control" placeholder="Enter Mailing Address" style="background-color: ghostwhite;" required>
+    
+            <label>Additional guidance on how to locate you (if applicable)</label>
+            <input type="text" class="form-control" placeholder="Enter Additional Guidance" style="background-color: ghostwhite;" required>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <br>
+
+  <div class="container-fluid">
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-6">
+            <h4 class="text-center mb-4" style="background-color: #90b5df; color:#ffffff; padding: 10px;">B) Complainant 2</h4>
+            <!-- Complainant 2 information -->
+            <div class="row">
+              <div class="col-md-6">
+                  <label>Full Name</label>
+                  <input type="text" class="form-control" placeholder="Enter Name" style="background-color: ghostwhite;" required>
+              </div>
+              <div class="col-md-6">
+                  <label>Title</label>
+                  <input type="text" class="form-control" placeholder="Enter Title" style="background-color: ghostwhite;" required>
+              </div>
+          </div>          
+    
+          <div class="row">
+            <div class="col-md-6">
+                <label>Organisation</label>
+                <input type="text" class="form-control" placeholder="Enter Organisation" style="background-color: ghostwhite;" required>
+            </div>
+            <div class="col-md-6">
+                <label>Phone Number</label>
+                <input type="tel" class="form-control" placeholder="(+63XX XXXX XXX)" maxlength="11" id="num" style="background-color: ghostwhite;" required>
+            </div>
+        </div>
+    
+            <label>Email </label>
+            <input type="email" class="form-control" placeholder="Enter Email" style="background-color: ghostwhite;" required>
+          </div>
+            <div class="col-md-6">
+            <h4 class="text-center mb-4" style="background-color: #90b5df; color:#ffffff; padding: 10px;">LOCATION</h4>
+    
+            <label>Your address/location</label>
+            <input type="text" class="form-control" placeholder="Enter Addresss/Location" style="background-color: ghostwhite;" required>
+    
+            <label>Mailing Address (if different) </label>
+            <input type="text" class="form-control" placeholder="Enter Mailing Address" style="background-color: ghostwhite;" required>
+    
+            <label>Additional guidance on how to locate you (if applicable)</label>
+            <input type="text" class="form-control" placeholder="Enter Additional Guidance" style="background-color: ghostwhite;" required>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+    <br>
+  
+  <div class="container-fluid">
+    <div class="card"> 
+           <div class="col-md-12">         
+              <div class="card-body">
+                  <div class="container">
+                      <p class="text-center" style="background-color: #90b5df; color:#ffffff;  padding: 10px;">Please provide the names and/or description of other individuals or groups that support the complaint (If any):</p>
+                      <div class="table-responsive">
+                          <table class="table table-bordered">
+                              <thead>
+                                  <tr>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Title/Affiliation</th>
+                                    <th>Contact Information</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr>
+                                    <td><input type="name" style="background-color: ghostwhite;" required></td>
+                                    <td><input type="name" style="background-color: ghostwhite;" required></td>
+                                    <td><input type="name" style="background-color: ghostwhite;" required></td>
+                                    <td><input type="name" style="background-color: ghostwhite;" required></td>
+                                  </tr>
+                                  <tr>
+                                    <td><input type="name" style="background-color: ghostwhite;" required></td>
+                                    <td><input type="name" style="background-color: ghostwhite;" required></td>
+                                    <td><input type="name" style="background-color: ghostwhite;" required></td>
+                                    <td><input type="name" style="background-color: ghostwhite;" required></td>
+                                  </tr>
+                                  <tr>
+                                    <td><input type="name" style="background-color: ghostwhite;" required></td>
+                                    <td><input type="name" style="background-color: ghostwhite;" required></td>
+                                    <td><input type="name" style="background-color: ghostwhite;" required></td>
+                                    <td><input type="name" style="background-color: ghostwhite;" required></td>
+                                  </tr>
+                                  <tr>
+                                    <td><input type="name" style="background-color: ghostwhite;" required></td>
+                                    <td><input type="name" style="background-color: ghostwhite;" required></td>
+                                    <td><input type="name" style="background-color: ghostwhite;" required></td>
+                                    <td><input type="name" style="background-color: ghostwhite;" required></td>
+                                  </tr>
+                                  <tr>
+                                    <td><input type="name" style="background-color: ghostwhite;" required></td>
+                                    <td><input type="name" style="background-color: ghostwhite;" required></td>
+                                    <td><input type="name" style="background-color: ghostwhite;" required></td>
+                                    <td><input type="name" style="background-color: ghostwhite;" required></td>
+                                  </tr>
+                                  <tr>
+                                    <td><input type="name" style="background-color: ghostwhite;" required></td>
+                                    <td><input type="name" style="background-color: ghostwhite;" required></td>
+                                    <td><input type="name" style="background-color: ghostwhite;" required></td>
+                                    <td><input type="name" style="background-color: ghostwhite;" required></td>
+                                  </tr>
+                                  <tr>
+                                    <td><input type="name" style="background-color: ghostwhite;" required></td>
+                                    <td><input type="name" style="background-color: ghostwhite;" required></td>
+                                    <td><input type="name" style="background-color: ghostwhite;" required></td>
+                                    <td><input type="name" style="background-color: ghostwhite;" required></td>
+                                  </tr>
+                                  <!-- More rows as needed -->
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+          </div> 
+      </div>
+   </div>
+
+
+  <div class="container-fluid"> 
+    <div class="card">
+      <div class="card-body">
+        <h4 class="text-center mb-4" style="background-color: #90b5df; color:#ffffff; padding: 10px;">V. IFAD Project / programme of concern and nature of concern</h4>
+        <label>a) Which IFAD-supported project/programme are you concerned about? (please provide the Project/Programme name, if known):</label>
+        <input type="text" class="form-control" style="background-color: ghostwhite;" required>
+        <label>b) Please provide a short description of your concerns about the project/programme.  Please describe, as well, the types of Environmental and Social impacts that may occur, or have occurred, as a result.</label>
+        <textarea class="form-control mb-2" rows="3" placeholder="Enter text" style="background-color: ghostwhite;" required></textarea>
+        <label>c) When did the situation that raised your concerns start developing? (Please note that complaints must concern projects/programmes currently under design/implementation. Complaints concerning projects/programmes that preceded the operationalization of SECAP in 1/1/2015, projects that have been closed for a period of 24 months or more will not be eligible).</label>
+        <textarea class="form-control mb-2" rows="3" placeholder="Enter text" style="background-color: ghostwhite;" required></textarea>
+      </div>
+     </div>
+    </div> 
+  
+  <br>
+
+  <div class="container-fluid"> 
+       <!-- vi) PROJECT LEVEL -->
+       <div class="card mb-4">
+        <div class="card-body">
+          <h4 class="text-center mb-4" style="background-color: #90b5df; color:#ffffff;  padding: 10px;">VI. Project Level</h4>
+          <!-- Input fields for project level concerns -->
+      
+          <div>
+            <label>a) Have you raised your complaint with government representatives or NGO(s) responsible for planning or executing the project or programme or the Lead Agency or any governmental body with the responsibility of overseeing the Lead Agency? (The complaint should first be brought to the above authorities. If they do not respond then the matter may be brought to IFAD's attention. The complaint may be brought directly to IFAD if the complainants feel they may be subject to retaliation).</label>
+            <select class="form-control" style="background-color: ghostwhite;" required>
+              <option value="" disabled selected>choose your option</option>
+              <option>YES</option>
+              <option>NO</option>
+            </select>
+
+          <br>
+
+            <label style="font-weight: bold;">If Yes,</label>
+
+              <div class="table-responsive">
+                  <table class="table table-bordered">
+                      <thead>
+                          <tr>
+                              <th>First Name</th>
+                              <th>Last Name</th>
+                              <th>Title/Affiliation</th>
+                              <th>Estimated Date of Contact</th>
+                              <th>Nature of Communication</th>
+                              <th>Response from the Individual</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                            <td><input type="name" style="background-color: ghostwhite;" required></td>
+                            <td><input type="name" style="background-color: ghostwhite;" required></td>
+                            <td><input type="name" style="background-color: ghostwhite;" required></td>
+                            <td><input type="date" style="background-color: ghostwhite;" required></td>
+                            <td><input type="name" style="background-color: ghostwhite;" required></td>
+                            <td><input type="name" style="background-color: ghostwhite;" required></td>
+                          </tr>
+                          <tr>
+                            <td><input type="name" style="background-color: ghostwhite;" required></td>
+                            <td><input type="name" style="background-color: ghostwhite;" required></td>
+                            <td><input type="name" style="background-color: ghostwhite;" required></td>
+                            <td><input type="date" style="background-color: ghostwhite;" required></td>
+                            <td><input type="name" style="background-color: ghostwhite;" required></td>
+                            <td><input type="name" style="background-color: ghostwhite;" required></td>
+                          </tr>
+                          <tr>
+                            <td><input type="name" style="background-color: ghostwhite;" required></td>
+                            <td><input type="name" style="background-color: ghostwhite;" required></td>
+                            <td><input type="name" style="background-color: ghostwhite;" required></td>
+                            <td><input type="date" style="background-color: ghostwhite;" required></td>
+                            <td><input type="name" style="background-color: ghostwhite;" required></td>
+                            <td><input type="name" style="background-color: ghostwhite;" required></td>
+                          </tr>
+                          <tr>
+                            <td><input type="name" style="background-color: ghostwhite;" required></td>
+                            <td><input type="name" style="background-color: ghostwhite;" required></td>
+                            <td><input type="name" style="background-color: ghostwhite;" required></td>
+                            <td><input type="date" style="background-color: ghostwhite;" required></td>
+                            <td><input type="name" style="background-color: ghostwhite;" required></td>
+                            <td><input type="name" style="background-color: ghostwhite;" required></td>
+                          </tr>
+                          <!-- More rows can be added here if needed -->
+                      </tbody>
+                  </table>
+              </div>
+          
+              <div>
+                  <label>b) Please explain why, if the response or actions taken are not satisfactory.</label>
+                  <input type="text" class="form-control" placeholder="Enter Text" style="background-color: ghostwhite;" required>
+              </div>
+          
+              <div>
+                  <label>c) How do you wish to see the complaint resolved? Do you have any other matters, evidence, or facts (including supporting documents) that you would like to share?</label>
+                  <input type="text" class="form-control" placeholder="Enter Text" style="background-color: ghostwhite;" required>
+              </div>
+                                   
+          <br>
+                   
+           </div>
+         </div>
+       </div>
+     </div> 
+
+<br>
+
+  <!-- vii) IFAD Level -->
+  <div class="container-fluid"> 
+      <div class="card mb-4">
+        <div class="card-body">
+            <h4 class="text-center mb-4" style="background-color: #90b5df; color:#ffffff;  padding: 10px;">VII. IFAD Level</h4>
+            <!-- Input fields for IFAD level concerns -->
+            
+                <div class="form-group">
+                    <label>a) Do you disagree with the response from the IFAD Country team and Regional Division in relation to your complaint?</label>
+                    <select class="form-control" style="background-color: ghostwhite;" required>
+                        <option value="" disabled selected>Choose your option</option>
+                        <option>YES</option>
+                        <option>NO</option>
+                    </select>
+                </div>
+            
+            <label>b) Please provide the details of the response from the IFAD Country Team and Regional Division in relation to your complaint</label>
+            <textarea class="form-control mb-2" placeholder="Enter Text" style="background-color: ghostwhite;" required></textarea>
+            <label>c) Please explain why, if the response or actions taken are not satisfactory</label>
+            <textarea class="form-control mb-2" placeholder="Enter Text" style="background-color: ghostwhite;" required></textarea>
+            <label>d) How do you wish to see the complaint resolved? </label>
+            <textarea class="form-control mb-2" placeholder="Enter Text" style="background-color: ghostwhite;" required></textarea>
+            <label>e) Do you have any other matters or facts (including supporting documents) that you would like to share?</label>
+            <textarea class="form-control mb-2" placeholder="Enter Text" style="background-color: ghostwhite;" required></textarea>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+
+    <div class="text-center">
+        <button type="submit" class="btn btn-primary" style="width: 200px; font-size: 20px; font-weight: bold;">SUBMIT</button>
+    </div>
+    
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+    document.getElementById("sidebarCollapse").addEventListener("click", function() {
+    document.getElementById("sidebar").classList.toggle("active");
+});
+</script>
+</body>
+</html>
