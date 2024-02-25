@@ -54,29 +54,29 @@ a:focus {
 
 #sidebar {
     position: fixed;
-    height: 100vh;
-    overflow-y: hidden;
-    top: 0; 
-    left: 0; 
-    z-index: 1030;
-    min-width: 250px;
-    max-width: 250px;
+    top: 0;
+    left: 0;
+    width: 75px;
+    min-height: 100%;
+    z-index: 1;
     background: #a9c5e6;
     color: #fff;
     transition: all 0.3s;
+    float: right;
+    font-size: 16px;
 }
 
+
 #sidebar.active {
-    margin-left: -250px;
+    width: 250px;
 }
 
 #sidebar .sidebar-header {
-    padding: 20px;
     background: #90b5df;
 }
 
 #sidebar ul.components {
-    padding: 20px 0;
+    padding: 20px 10px 0;
     border-top: 1px solid #47748b;
 }
 
@@ -98,13 +98,24 @@ a:focus {
 #sidebar ul li a:hover {
     color: #7386D5;
     background: #fff;
-    padding-left: 20px;
 }
 
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
     color: #fff;
-    background: #90b5df;
+}
+
+#sidebar .list-unstyled.components li span.icon-text {
+    visibility: hidden;
+    font-size: 0; 
+    opacity: 0; 
+    transition: font-size 0.3s, visibility 0.3s, opacity 0.3s; 
+}
+
+#sidebar.active .list-unstyled.components li span.icon-text {
+    visibility: visible;
+    font-size: 16px; 
+    opacity: 1; 
 }
 
 a[data-toggle="collapse"] {
@@ -145,45 +156,35 @@ a.article:hover {
     padding: 20px;
     min-height: 100vh;
     transition: all 0.3s;
-    margin-left: 250px; 
+    padding-left: 70px;
 }
 
 #sidebar.active + #content {
-    margin-left: 0; 
+    margin-left: 180px;
 }
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
-    #sidebar {
-        margin-left: -250px;
-    }
-    #sidebar.active {
-        margin-left: 0;
-    }
-    #sidebarCollapse span {
-        display: none;
-    }
-
     #content {
         margin-left: 0; 
         width: 100%;
     }
-
-    #sidebarCollapse {
-        position: absolute;
-        top: 15px;
-        right: 15px;
-    }
 }
 
 .btn-info {
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0 17px;
     color: #fff;
     background-color: #90b5df;
+    border: none;
+    width: 100%;
 }
 
 .btn-info:hover {
     color: #fff;
     background-color: #7699c2;
+    border: none;
 }
 
 /* Card styles */
@@ -222,8 +223,8 @@ label {
 }
 
 #sidebar .logout-btn {
+    padding-left: 25px;
     cursor: pointer;
-    display: flex;
     align-items: center;
     text-align: left;
     position: absolute;

@@ -12,7 +12,10 @@
   <div class="wrapper">
     <nav id="sidebar">
       <div class="sidebar-header text-center">
-          <h3 text>Panel</h3>
+          <FontAwesomeIcon type="button" id="sidebarCollapse" class="btn btn-info" style="padding: 10px;">
+              <i class="fas fa-align-left"></i>
+              <a></a>
+          </FontAwesomeIcon>
       </div>
 
       <ul class="list-unstyled components">  
@@ -54,14 +57,6 @@
           <div class="card-body">
             <div class="text-center mb-4">
               <h4 style="background-color: #90b5df; color: #fff; padding: 10px;">TRACKING PROGRESS</h4>
-              <nav class="navbar navbar-expand-md navbar-light bg-light" style="padding: 10px; margin-left: 0px;">
-                <div class="container-fluid">
-                    <button type="button" id="sidebarCollapse" class="btn btn-info">
-                        <i class="fas fa-align-left"></i>
-                        <span>Menu</span>
-                    </button>
-                </div>
-            </nav>
             </div>            
             <div class="row">
               <div class="col-md-6">
@@ -232,8 +227,21 @@
   
   <script type="text/javascript">
     document.getElementById("sidebarCollapse").addEventListener("click", function() {
-    document.getElementById("sidebar").classList.toggle("active");
-});
+        document.getElementById("sidebar").classList.toggle("active");
+        closeAllSubmenus();
+    });
+
+    document.querySelectorAll('.list-unstyled.components .dropdown-toggle').forEach(function(item) {
+        item.addEventListener('click', function() {
+            document.getElementById("sidebar").classList.add("active");
+        });
+    });
+
+    function closeAllSubmenus() {
+        document.querySelectorAll("#sidebar .collapse.show").forEach(function(element) {
+            element.classList.remove("show");
+        });
+    }
 </script>
 
 </body>

@@ -9,6 +9,7 @@
   
   <script defer src="../static/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
   <script defer src="../static/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
 <style>
   body{
     font-family: 'Robot', sans-serif;
@@ -31,14 +32,17 @@
     background-color: #4caf4c;
     border-color: #4caf50;
   }
-
 </style>
+
 </head>
 <body>
 <div class="wrapper">
   <nav id="sidebar">
     <div class="sidebar-header text-center">
-        <h3 text>Panel</h3>
+        <FontAwesomeIcon type="button" id="sidebarCollapse" class="btn btn-info" style="padding: 10px;">
+            <i class="fas fa-align-left"></i>
+            <a></a>
+        </FontAwesomeIcon>
     </div>
 
     <ul class="list-unstyled components">  
@@ -79,15 +83,6 @@
   <div class="text-center mb-4">
     <label>Alleged non-compliance with its social and environmental policies and mandatory aspects of its social, environmental and climate assessment procedures (SECAP)</label>
   </div>
-
-  <nav class="navbar navbar-expand-md navbar-light bg-light" style="padding: 10px; margin-left: 0px;">
-    <div class="container-fluid">
-        <button type="button" id="sidebarCollapse" class="btn btn-info">
-            <i class="fas fa-align-left"></i>
-            <span>Menu</span>
-        </button>
-    </div>
-</nav>
   <br>
 
   <div class="container-fluid">
@@ -477,12 +472,13 @@
             <textarea class="form-control mb-2" placeholder="Enter Text" style="background-color: ghostwhite;" required></textarea>
             <label>e) Do you have any other matters or facts (including supporting documents) that you would like to share?</label>
             <textarea class="form-control mb-2" placeholder="Enter Text" style="background-color: ghostwhite;" required></textarea>
+          </div>
+         </div>
+        </div>
+       </div>
       </div>
     </div>
   </div>
-  </div>
-</div>
-</div>
 
     <div class="text-center">
         <button type="submit" class="btn btn-primary" style="width: 200px; font-size: 20px; font-weight: bold;">SUBMIT</button>
@@ -493,10 +489,24 @@
     <script src="../static/js/popper.min.js"></script>
     <script src="../static/js/bootstrap.bundle.min.js"></script>
   
-  <script type="text/javascript">
-    document.getElementById("sidebarCollapse").addEventListener("click", function() {
-    document.getElementById("sidebar").classList.toggle("active");
-});
-</script>
+    <script type="text/javascript">
+      document.getElementById("sidebarCollapse").addEventListener("click", function() {
+          document.getElementById("sidebar").classList.toggle("active");
+          closeAllSubmenus();
+      });
+
+      document.querySelectorAll('.list-unstyled.components .dropdown-toggle').forEach(function(item) {
+          item.addEventListener('click', function() {
+              document.getElementById("sidebar").classList.add("active");
+          });
+      });
+
+      function closeAllSubmenus() {
+          document.querySelectorAll("#sidebar .collapse.show").forEach(function(element) {
+              element.classList.remove("show");
+          });
+      }
+  </script>
+  
 </body>
 </html>
