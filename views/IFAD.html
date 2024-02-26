@@ -4,36 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dropdown Fix</title>
+  <title>IFAD Form</title>
     <link rel="stylesheet" href="../static/css/bootstrap.min.css">
     <link rel="stylesheet" href="../static/css/style.css">
 
-    <script defer src="../../static/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
-    <script defer src="../../static/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
-
-<style>
-  body{
-    font-family: 'Robot', sans-serif;
-  }
-  .card {
-    border: 1.5px solid #bdbcbc;
-    border-radius: 10px;
-    box-shadow: 0px 0px 15px 0px rgb(0, 0, 0, 0.05);
-    margin-bottom: 20px;
-  }
-  hr{
-    border-top: 1.5px solid #bdbcbc;
-  }
-  label {
-    color: #4d4d4d;
-    font-weight: 500;
-    padding-top: 10px;
-  }
-  .btn-primary {
-    background-color: #4caf4c;
-    border-color: #4caf50;
-  }
-</style>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -42,7 +18,6 @@
     <div class="sidebar-header text-center">
         <FontAwesomeIcon type="button" id="sidebarCollapse" class="btn btn-info" style="padding: 10px;">
             <i class="fas fa-align-left"></i>
-            <a></a>
         </FontAwesomeIcon>
     </div>
 
@@ -80,7 +55,7 @@
 
 <div id="content">
   <div class="card-body">
-  <h4 class="text-center" style="background-color: #90b5df; color:#ffffff; padding: 10px;">IFAD Complaints procedure & the enhanced complaints procedure submission form </h4>
+  <h5 class="text-center" style="background-color: #264653; color:#ffffff; padding: 10px;">IFAD Complaints procedure & the enhanced complaints procedure submission form </h5>
   <div class="text-center mb-4">
     <label>Alleged non-compliance with its social and environmental policies and mandatory aspects of its social, environmental and climate assessment procedures (SECAP)</label>
   </div>
@@ -92,7 +67,7 @@
             <!-- i) NATURE OF THE COMPLAINT -->
             <div class="row">
                 <div class="col-md-6">
-                    <h4 class="text-center mb-4" style="background-color: #90b5df; color:#ffffff; padding: 10px;">I. Nature of The Complaint</h4>
+                    <h5 class="text-center mb-4" style="background-color: #264653; color:#ffffff; padding: 10px;">I. Nature of The Complaint</h5>
                     <div class="dropdown">
                         <div class="form-group">
                             <label>What complaint are you making to IFAD? (Choose the one(s) applicable to your complaint)</label>
@@ -118,7 +93,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <h4 class="text-center mb-4" style="background-color: #90b5df; color:#ffffff; padding: 10px;">II. Complainants Information</h4>
+                    <h5 class="text-center mb-4" style="background-color: #264653; color:#ffffff; padding: 10px;">II. Complainants Information</h5>
                     <form action="/action_page.php">
                         <label for="quantity">a) How many Complainants are you? (You must be 2 in order for the Complaint to be admissible)</label>
                         <input type="number" id="quantity" name="quantity" min="2" placeholder="Enter number" class="form-control" style="background-color: ghostwhite;" required>
@@ -136,7 +111,7 @@
             </div>
       <br>
             <!-- iii) CONFIDENTIALITY -->
-            <h4 class="text-center mb-4" style="background-color: #90b5df; color:#ffffff; padding: 10px;">III. Confidentiality</h4>
+            <h5 class="text-center mb-4" style="background-color: #264653; color:#ffffff; padding: 10px;">III. Confidentiality</h5>
             <div class="row">
               <div class="col-md-6">
                   <div class="form-group">
@@ -174,10 +149,10 @@
   <div class="container-fluid">
     <div class="card">
       <div class="card-body">
-        <h4 class="text-center mb-4" style="background-color: #90b5df; color:#ffffff; padding: 10px;">IV. Complainants' information</h4>
+        <h5 class="text-center mb-4" style="background-color: #264653; color:#ffffff; padding: 10px;">IV. Complainants' information</h5>
         <div class="row">
           <div class="col-md-6">
-            <h4 class="text-center mb-4" style="background-color: #90b5df; color:#ffffff; padding: 10px;">A) Complainant 1</h4>
+            <h5 class="text-center mb-4" style="background-color: #264653; color:#ffffff; padding: 10px;">A) Complainant 1</h5>
             <!-- Complainant 1 information -->
             <div class="row">
               <div class="col-md-6">
@@ -205,7 +180,7 @@
             <input type="email" class="form-control" placeholder="Enter Email" style="background-color: ghostwhite;" required>
           </div>
           <div class="col-md-6">
-            <h4 class="text-center mb-4" style="background-color: #90b5df; color:#ffffff; padding: 10px;">Location</h4>
+            <h5 class="text-center mb-4" style="background-color: #264653; color:#ffffff; padding: 10px;">Location</h5>
     
             <label>Your address/location</label>
             <input type="text" class="form-control" placeholder="Enter Addresss/Location" style="background-color: ghostwhite;" required>
@@ -228,7 +203,7 @@
       <div class="card-body">
         <div class="row">
           <div class="col-md-6">
-            <h4 class="text-center mb-4" style="background-color: #90b5df; color:#ffffff; padding: 10px;">B) Complainant 2</h4>
+            <h5 class="text-center mb-4" style="background-color: #264653; color:#ffffff; padding: 10px;">B) Complainant 2</h5>
             <!-- Complainant 2 information -->
             <div class="row">
               <div class="col-md-6">
@@ -256,7 +231,7 @@
             <input type="email" class="form-control" placeholder="Enter Email" style="background-color: ghostwhite;" required>
           </div>
             <div class="col-md-6">
-            <h4 class="text-center mb-4" style="background-color: #90b5df; color:#ffffff; padding: 10px;">LOCATION</h4>
+            <h5 class="text-center mb-4" style="background-color: #264653; color:#ffffff; padding: 10px;">LOCATION</h5>
     
             <label>Your address/location</label>
             <input type="text" class="form-control" placeholder="Enter Addresss/Location" style="background-color: ghostwhite;" required>
@@ -280,7 +255,7 @@
            <div class="col-md-12">         
               <div class="card-body">
                   <div class="container">
-                      <p class="text-center" style="background-color: #90b5df; color:#ffffff;  padding: 10px;">Please provide the names and/or description of other individuals or groups that support the complaint (If any):</p>
+                      <p class="text-center" style="background-color: #264653; color:#ffffff;  padding: 10px;">Please provide the names and/or description of other individuals or groups that support the complaint (If any):</p>
                       <div class="table-responsive">
                           <table class="table table-bordered">
                               <thead>
@@ -348,7 +323,7 @@
   <div class="container-fluid"> 
     <div class="card">
       <div class="card-body">
-        <h4 class="text-center mb-4" style="background-color: #90b5df; color:#ffffff; padding: 10px;">V. IFAD Project / programme of concern and nature of concern</h4>
+        <h5 class="text-center mb-4" style="background-color: #264653; color:#ffffff; padding: 10px;">V. IFAD Project / programme of concern and nature of concern</h5>
         <label>a) Which IFAD-supported project/programme are you concerned about? (please provide the Project/Programme name, if known):</label>
         <input type="text" class="form-control" style="background-color: ghostwhite;" required>
         <label>b) Please provide a short description of your concerns about the project/programme.  Please describe, as well, the types of Environmental and Social impacts that may occur, or have occurred, as a result.</label>
@@ -365,7 +340,7 @@
        <!-- vi) PROJECT LEVEL -->
        <div class="card mb-4">
         <div class="card-body">
-          <h4 class="text-center mb-4" style="background-color: #90b5df; color:#ffffff;  padding: 10px;">VI. Project Level</h4>
+          <h5 class="text-center mb-4" style="background-color: #264653; color:#ffffff;  padding: 10px;">VI. Project Level</h5>
           <!-- Input fields for project level concerns -->
       
           <div>
@@ -453,7 +428,7 @@
   <div class="container-fluid"> 
       <div class="card mb-4">
         <div class="card-body">
-            <h4 class="text-center mb-4" style="background-color: #90b5df; color:#ffffff;  padding: 10px;">VII. IFAD Level</h4>
+            <h5 class="text-center mb-4" style="background-color: #264653; color:#ffffff;  padding: 10px;">VII. IFAD Level</h5>
             <!-- Input fields for IFAD level concerns -->
             
                 <div class="form-group">
@@ -476,15 +451,13 @@
           </div>
          </div>
         </div>
-       </div>
+        <div class="text-right">
+          <button type="submit" class="btn btn-primary" style="width: 150px; font-size: 18px; font-weight: bold;">Submit</button>
+        </div>
       </div>
     </div>
-  </div>
-
-    <div class="text-center">
-        <button type="submit" class="btn btn-primary" style="width: 200px; font-size: 20px; font-weight: bold;">SUBMIT</button>
-    </div>
-    
+  </div>  
+</div>
 
     <script src="../static/js/jquery.slim.min.js"></script>
     <script src="../static/js/popper.min.js"></script>
