@@ -2,9 +2,9 @@ from flask import Flask, render_template
 
 app = Flask(__name__,template_folder="views")
 
-@app.route("/Sidebar")
+@app.route("/Home")
 def index():
-    return render_template("Sidebar.html")
+    return render_template("Home.html")
 
 @app.route("/IFAD_Form")
 def ifadForm():
