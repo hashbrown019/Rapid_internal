@@ -18,4 +18,8 @@ def ifadForm():
 def trackingForm():
     return render_template("form.html")
 
+@app.route("/Registration_Form")
+def regForm():
+    return render_template("Registration.html")
+
 app.run(debug=True)
