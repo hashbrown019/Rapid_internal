@@ -56,7 +56,7 @@ a:focus {
     position: fixed;
     top: 0;
     left: 0;
-    width: 70px;
+    width:60px;
     min-height: 100%;
     z-index: 1;
     background: #264653;
@@ -76,7 +76,7 @@ a:focus {
 }
 
 #sidebar ul.components {
-    padding: 10px 10px 0;
+    padding: 10px 0px 0;
     border-top: 1px solid #47748b;
 }
 
@@ -227,9 +227,8 @@ label {
 }
 
 #sidebar .logout-btn {
-    padding-left: 25px;
+    padding-left: px;
     cursor: pointer;
-    align-items: center;
     text-align: left;
     position: absolute;
     bottom: 0; 
@@ -240,8 +239,4 @@ label {
 
   .list-unstyled.components li a i {
     padding-right: 10px;
-}
-
-.icon-text {
-    margin-left: 5px;
 }
