@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -12,16 +12,19 @@
 
     <script defer src="../static/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="../static/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
-
+    
 </head>
 
 <body>
     <div class="wrapper">
         <nav id="sidebar">
             <div class="sidebar-header text-center">
-                <h3 text>Panel</h3>
+                <FontAwesomeIcon type="button" id="sidebarCollapse" class="btn btn-info" style="padding: 10px;">
+                    <i class="fas fa-align-left"></i>
+                    <a></a>
+                </FontAwesomeIcon>
             </div>
-
+      
             <ul class="list-unstyled components">  
                 <li>
                     <a href="Sidebar.html"><i class="fas fa-home"></i> <span class="icon-text">Home</span></a>
@@ -57,10 +60,6 @@
         <div id="content">
             <nav class="navbar navbar-expand-md navbar-light bg-light">
                 <div class="container-fluid">
-                    <button type="button" id="sidebarCollapse" class="btn btn-info">
-                        <i class="fas fa-align-left"></i>
-                        <span>Menu</span>
-                    </button>
                 </div>
             </nav>               
         </div>
@@ -73,7 +72,21 @@
     <script type="text/javascript">
         document.getElementById("sidebarCollapse").addEventListener("click", function() {
             document.getElementById("sidebar").classList.toggle("active");
+            closeAllSubmenus();
         });
+
+        document.querySelectorAll('.list-unstyled.components .dropdown-toggle').forEach(function(item) {
+            item.addEventListener('click', function() {
+                document.getElementById("sidebar").classList.add("active");
+            });
+        });
+
+        function closeAllSubmenus() {
+            document.querySelectorAll("#sidebar .collapse.show").forEach(function(element) {
+                element.classList.remove("show");
+            });
+        }
     </script>
+    
 </body>
 </html>
