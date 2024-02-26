@@ -1,23 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <title>Sidebar Menu</title>
-    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../static/css/style.css">
-
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
-    
-</head>
+{% include 'base.html' %}
 
 <body>
     <div class="wrapper">
-        {% include 'parts/side.html' %}
+        
+        {% include 'route/sidebar.html' %}
 
         <div id="content">
             <nav class="navbar navbar-expand-md navbar-light bg-light">
@@ -26,10 +15,6 @@
             </nav>               
         </div>
     </div>
-
-    <script src="../static/js/jquery.slim.min.js"></script>
-    <script src="../static/js/popper.min.js"></script>
-    <script src="../static/js/bootstrap.bundle.min.js"></script>
     
     <script type="text/javascript">
         document.getElementById("sidebarCollapse").addEventListener("click", function() {
