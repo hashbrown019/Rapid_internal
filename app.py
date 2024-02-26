@@ -2,8 +2,12 @@ from flask import Flask, render_template
 
 app = Flask(__name__,template_folder="views")
 
-@app.route("/Home")
+@app.route("/")
 def index():
+    return render_template("Home.html")
+
+@app.route("/Home")
+def homepage():
     return render_template("Home.html")
 
 @app.route("/IFAD_Form")
