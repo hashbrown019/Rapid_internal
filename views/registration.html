@@ -23,7 +23,7 @@
         <div class="row justify-content-center">
             <div class="col-md-10">
                 <div class="card">
-                    <div class="card-header">
+                    <div class="card-header text-center" style="background-color: #264653; color: white;">
                         <h4>Register Here</h4>
                     </div>
                     <div class="card-body">
@@ -71,8 +71,8 @@
                                 <form action="submit_form.php" method="post">
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
-                                            <label for="gender">Email:</label>
-                                            <input type="email" class="form-control" id="email" name="email" style="background-color: ghostwhite;" required>
+                                            <label for="email">Email:</label>
+                                            <input type="email" class="form-control" id="email" name="email" style="background-color: ghostwhite;" autocomplete="email" required>
                                         </div>
         
                                         <div class="form-group col-md-6">
@@ -94,7 +94,7 @@
                                     <form action="submit_form.php" method="post" onsubmit="classifyRegion(); return false;">
                                         <div class="form-row col-md-12">
                                             <div class="form-group col-md-6">
-                                                <label for="status">RCU:</label>
+                                                <label for="rcu">RCU:</label>
                                                 <select class="form-control" id="rcu" name="rcu" style="font-size: 12px; height: 40px; background-color: ghostwhite;" onchange="updatePCUOptions()" required>
                                                     <option value="" disabled selected>Select option</option>
                                                     <option value="8">Region VIII - Eastern Visayas</option>
@@ -107,7 +107,7 @@
                                             </div>
                                         
                                             <div class="form-group col-md-6">
-                                                <label for="status">PCU:</label>
+                                                <label for="pcu">PCU:</label>
                                                 <select class="form-control" id="pcu" name="pcu" style="font-size: 12px; height: 40px; background-color: ghostwhite;" required>
                                                     <option value="" disabled selected>Select option</option>
                                                 </select>
@@ -116,7 +116,7 @@
               
                             <div class="form-group col-md-13">
                                 <label for="username">Username:</label>
-                                <input type="text" class="form-control" id="username" name="username" style="background-color: ghostwhite;" required>
+                                <input type="text" class="form-control" id="username" name="username" style="background-color: ghostwhite;" autocomplete="username" required>
                             </div>
 
                             <div class="form-group col-md-13">
@@ -143,7 +143,7 @@
                                 </div>
                                 <p id="passwordMatchMessage" style="color: red;"></p>
                                 
-                                <label for="space">&nbsp; &nbsp; &nbsp;</label>
+                                <br>
                                 
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
@@ -193,9 +193,9 @@
         var messageElement = document.getElementById("passwordMatchMessage");
 
         if (password === confirmPassword) {
-            messageElement.textContent = "Passwords match!";
+            messageElement.textContent = "Password match!";
         } else {
-            messageElement.textContent = "Passwords do not match!";
+            messageElement.textContent = "Password does not match!";
         }
     }
     function validateAndSubmit() {
