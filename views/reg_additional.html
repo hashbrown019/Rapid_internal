@@ -1,0 +1,56 @@
+{% include 'base.html' %}
+
+    <title>Registration Results</title>
+    
+<body>
+    {% include 'route/sidebar.html' %}
+    <div class="container mt-2">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="card">
+                    <div class="card-body">
+                        <h4>Registration Results</h4>
+
+                        <table class="table table-bordered mt-3">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>RCU</th>
+                                    <th>PCU</th>
+                                    <th>Designation</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Replace the following rows with dynamic data from your form submissions -->
+                                <tr>
+                                    <td>Last Name, First Name, Initial</td>
+                                    <td>Region VIII - Eastern Visayas</td>
+                                    <td>BARMM</td>
+                                    <td>Developer</td>
+                                </tr>
+                                <!-- Add more rows as needed -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        document.getElementById("sidebarCollapse").addEventListener("click", function() {
+            document.getElementById("sidebar").classList.toggle("active");
+            closeAllSubmenus();
+        });
+
+        document.querySelectorAll('.list-unstyled.components .dropdown-toggle').forEach(function(item) {
+            item.addEventListener('click', function() {
+                document.getElementById("sidebar").classList.add("active");
+            });
+        });
+
+        function closeAllSubmenus() {
+            document.querySelectorAll("#sidebar .collapse.show").forEach(function(element) {
+                element.classList.remove("show");
+            });
+        }
+    </script>

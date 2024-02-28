@@ -30,4 +30,8 @@ def table_trackingForm():
 def table_IFAD():
     return render_template("IFADtable.html")
 
+@app.route("/reg_Table")
+def table_reg():
+    return render_template("reg_additional.html")
+
 app.run(debug=True)
