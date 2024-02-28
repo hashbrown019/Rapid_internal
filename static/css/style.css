@@ -251,3 +251,51 @@ label {
 #sidebar ul ul.collapse.show {
     max-height: 90px;
 }
+
+table {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(to bottom, #ffffff, #f8f8f8);
+    border:#adadad ;
+  }
+  
+  th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #adadad;
+    border-right: 1.5px solid  #adadad;
+    border-left: 1.5px solid  #adadad;
+  }
+  
+  th {
+    background-color: #264653;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    border-right: 1.5px solid white;
+  }
+  
+  th:last-child {
+    border-right: none;
+  }
+  
+  tr:hover {
+    background-color: #979797;
+  }
+  
+  tr:nth-child(odd) {
+    background-color: rgb(223, 223, 223);
+  }
+  
+  @media (max-width: 768px) {
+    table {
+      border-radius: 0;
+      box-shadow: none;
+    }
+  }  

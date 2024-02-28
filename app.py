@@ -22,4 +22,12 @@ def trackingForm():
 def regForm():
     return render_template("Registration.html")
 
+@app.route("/Tracking_Table")
+def table_trackingForm():
+    return render_template("tableTracking.html")
+
+@app.route("/IFAD_Table")
+def table_trackingForm():
+    return render_template("IFADtable.html")
+
 app.run(debug=True)
