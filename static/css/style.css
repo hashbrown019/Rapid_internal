@@ -279,6 +279,7 @@ table {
     font-weight: 600;
     font-size: 14px;
     border-right: 1.5px solid white;
+    text-align: center;
   }
   
   th:last-child {
@@ -286,7 +287,7 @@ table {
   }
   
   tr:hover {
-    background-color: #979797;
+    background-color: #d3d3d3;
   }
   
   tr:nth-child(odd) {
@@ -299,3 +300,12 @@ table {
       box-shadow: none;
     }
   }  
+
+  .custom-table {
+    font-family: 'Poppins', sans-serif;
+}
+
+.border-div {
+    border: 2px solid #929292;
+    border-radius: 5px;
+}
