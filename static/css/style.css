@@ -56,7 +56,7 @@ a:focus {
     position: fixed;
     top: 0;
     left: 0;
-    width:60px;
+    width:50px;
     min-height: 100%;
     z-index: 1;
     background: #264653;
@@ -75,11 +75,6 @@ a:focus {
     background: #264653;
 }
 
-#sidebar ul.components {
-    padding: 10px 0px 0;
-    border-top: 1px solid #47748b;
-}
-
 #sidebar ul p {
     color: #fff;
     padding: 10px;
@@ -87,6 +82,7 @@ a:focus {
 
 #sidebar ul li a {
     padding: 10px;
+    padding-left: 13px;
     font-size: 1.1em;
     display: block;
 }
@@ -95,6 +91,7 @@ a:focus {
     color: #264653;
     background: #fff;
 }
+
 
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
@@ -212,7 +209,7 @@ label {
 
 .btn-primary:hover{
     color: #264653;
-    background-color: rgb(211, 211, 211);
+    background-color: rgb(204, 203, 203);
     border: none; 
 }
 
@@ -227,7 +224,7 @@ label {
 }
 
 #sidebar .logout-btn {
-    padding-left: px;
+    padding-left: 14px;
     cursor: pointer;
     text-align: left;
     position: absolute;
@@ -237,6 +234,20 @@ label {
     z-index: 1; 
   }
 
-  .list-unstyled.components li a i {
-    padding-right: 10px;
+  #sidebar.active .dropdown-toggle::after {
+    display: block;
+}
+
+#sidebar .dropdown-toggle::after {
+    display: none;
+}
+
+#sidebar ul ul {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.1s ease-in-out;
+}
+
+#sidebar ul ul.collapse.show {
+    max-height: 90px;
 }
