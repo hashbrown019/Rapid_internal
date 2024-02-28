@@ -27,7 +27,7 @@ def table_trackingForm():
     return render_template("tableTracking.html")
 
 @app.route("/IFAD_Table")
-def table_trackingForm():
+def table_IFAD():
     return render_template("IFADtable.html")
 
 app.run(debug=True)
