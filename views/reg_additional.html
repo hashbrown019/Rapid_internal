@@ -1,48 +1,59 @@
 {% include 'base.html' %}
 
-    <title>Registration Results</title>
-    
 <body>
-    <div class="wrapper"></div>
-    {% include 'route/sidebar.html' %}
-    <div id="content">
-        <div class="container-fluid">
-            <div>
+    <div class="wrapper">
+        {% include 'route/sidebar.html' %}
+        <div id="content">
+            <div class="container-fluid">
                 <div>
-                    <div class="card-body">
-                        <div class="text-center mb-4" style="margin-bottom: 1rem!important;">
-                            <h4 style="background-color: #264653; color: #fff; padding: 10px;">REGISTRATION TABLE</h4>
-                        </div>  
-                        <div class="card">
-                            <div class="card-body">
-                        <table class="table table-bordered mt-3">
-                            <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>RCU</th>
-                                    <th>PCU</th>
-                                    <th>Designation</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <!-- Replace the following rows with dynamic data from your form submissions -->
-                                <tr>
-                                    <td>Last Name, First Name, Initial</td>
-                                    <td>Region VIII - Eastern Visayas</td>
-                                    <td>BARMM</td>
-                                    <td>Developer</td>
-                                </tr>
-                                <!-- Add more rows as needed -->
-                            </tbody>
-                        </table>
-                      </div>
+                    <div>
+                        <div class="card-body">
+                            <div class="text-center mb-4" style="margin-bottom: 1rem!important;">
+                                <h4 style="background-color: #264653; color: #fff; padding: 10px;">REGISTRATION</h4>
+                            </div>  
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="text-center mb-4 border-div">
+                                        <h5 style="color: #264653; padding: 10px; margin-bottom: 0;">TABLE LIST</h5>
+                                    </div>                                    
+                                    <div class="table-responsive"> <!-- Wrap table inside a div with class table-responsive -->
+                                        <table class="table"> <!-- Remove table-responsive class from here -->
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>RCU</th>
+                                                <th>PCU</th>
+                                                <th>DESIGNATION</th>
+                                                <th>STATUS</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Te</td>
+                                                <td>Test</td>
+                                                <td>Test</td>
+                                                <td>Test</td>
+                                                <td>
+                                                    <div class="checkbox-container">
+                                                      <input id="checkbox_toggle" type="checkbox" class="check">
+                                                      <div class="checkbox">
+                                                        <label class="slide" for="checkbox_toggle">
+                                                          <label class="toggle" for="checkbox_toggle"></label>
+                                                          <label class="text" for="checkbox_toggle">Active</label>
+                                                          <label class="text" for="checkbox_toggle">Inactive</label>
+                                                        </label>
+                                                      </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
             </div>
-          </div>
-        </div>
+        </div>                
+    </div>
+    
     <script type="text/javascript">
         document.getElementById("sidebarCollapse").addEventListener("click", function() {
             document.getElementById("sidebar").classList.toggle("active");
@@ -61,3 +72,4 @@
             });
         }
     </script>
+</body>
