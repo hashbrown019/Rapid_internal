@@ -304,3 +304,8 @@ table {
   .custom-table {
     font-family: 'Poppins', sans-serif;
 }
+
+.border-div {
+    border: 2px solid #929292;
+    border-radius: 5px;
+}
