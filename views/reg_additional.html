@@ -3,14 +3,18 @@
     <title>Registration Results</title>
     
 <body>
+    <div class="wrapper"></div>
     {% include 'route/sidebar.html' %}
-    <div class="container mt-2">
-        <div class="row justify-content-center">
-            <div class="col-md-10">
-                <div class="card">
+    <div id="content">
+        <div class="container-fluid">
+            <div>
+                <div>
                     <div class="card-body">
-                        <h4>Registration Results</h4>
-
+                        <div class="text-center mb-4" style="margin-bottom: 1rem!important;">
+                            <h4 style="background-color: #264653; color: #fff; padding: 10px;">REGISTRATION TABLE</h4>
+                        </div>  
+                        <div class="card">
+                            <div class="card-body">
                         <table class="table table-bordered mt-3">
                             <thead>
                                 <tr>
@@ -31,11 +35,14 @@
                                 <!-- Add more rows as needed -->
                             </tbody>
                         </table>
+                      </div>
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
     <script type="text/javascript">
         document.getElementById("sidebarCollapse").addEventListener("click", function() {
             document.getElementById("sidebar").classList.toggle("active");
