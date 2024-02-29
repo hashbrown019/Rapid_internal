@@ -318,20 +318,21 @@ table {
 .switch {
     position: relative;
     height: 1.5rem;
-    width: 3rem;
+    width: 3.5rem;
     cursor: pointer;
     appearance: none;
     -webkit-appearance: none;
     border-radius: 9999px;
     background-color: rgba(100, 116, 139, 0.377);
     transition: all .3s ease;
-    margin-right: 20px;  
+      
 }
 
 .status-container {
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 
@@ -356,7 +357,7 @@ table {
 .switch::before {
     position: absolute;
     content: "";
-    left: calc(1.5rem - 1.6rem);
+    left: calc(2.1rem - 2rem);
     top: calc(1.5rem - 1.6rem);
     display: block;
     height: 1.6rem;
@@ -380,4 +381,19 @@ table {
 .switch:checked:before {
     transform: translateX(100%);
     border-color: rgba(77, 175, 80, 1);
+}
+@media (max-width: 768px) {
+    .status-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #statusText {
+        margin-left: 0;
+        margin-top: 5px; /* Adjust the margin-top as needed */
+    }
+
+    .switch {
+        margin-top: 5px; /* Adjust the margin-top as needed */
+    }
 }
