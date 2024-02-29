@@ -29,19 +29,14 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td class="text-center">Te</td>
-                                                    <td class="text-center">Test</td>
-                                                    <td class="text-center">Test</td>
-                                                    <td class="text-center">Test</td>
+                                                    <td class="text-center">Dee T. Ayye</td>
+                                                    <td class="text-center">Region XIII - Caraga</td>
+                                                    <td class="text-center">Surigao del Sur</td>
+                                                    <td class="text-center">Developer</td>
                                                     <td class="text-center">
-                                                        <div class="checkbox-container">
-                                                            <input id="checkbox_toggle" type="checkbox" class="check">
-                                                            <div class="checkbox">
-                                                                <label class="slide" for="checkbox_toggle">
-                                                                    <label class="toggle" for="checkbox_toggle"></label>
-                                                                    
-                                                                </label>
-                                                            </div>
+                                                        <div class="status-container">
+                                                            <input id="statusSwitch" checked="true" type="checkbox" class="switch" onchange="updateStatus()">
+                                                            <span id="statusText">ACTIVE</span>
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -57,22 +52,38 @@
         </div>                
     </div>
     
-    <script type="text/javascript">
-        document.getElementById("sidebarCollapse").addEventListener("click", function() {
-            document.getElementById("sidebar").classList.toggle("active");
-            closeAllSubmenus();
-        });
 
-        document.querySelectorAll('.list-unstyled.components .dropdown-toggle').forEach(function(item) {
-            item.addEventListener('click', function() {
-                document.getElementById("sidebar").classList.add("active");
-            });
-        });
+        <script type="text/javascript">
+    document.getElementById("sidebarCollapse").addEventListener("click", function() {
+        document.getElementById("sidebar").classList.toggle("active");
+        closeAllSubmenus();
+    });
 
-        function closeAllSubmenus() {
-            document.querySelectorAll("#sidebar .collapse.show").forEach(function(element) {
-                element.classList.remove("show");
-            });
+    document.querySelectorAll('.list-unstyled.components .dropdown-toggle').forEach(function(item) {
+        item.addEventListener('click', function() {
+            document.getElementById("sidebar").classList.add("active");
+        });
+    });
+
+    function closeAllSubmenus() {
+        document.querySelectorAll("#sidebar .collapse.show").forEach(function(element) {
+            element.classList.remove("show");
+        });
+    }
+  
+    function updateStatus() {
+        var statusSwitch = document.getElementById('statusSwitch');
+        var statusText = document.getElementById('statusText');
+
+        if (statusSwitch.checked) {
+            statusText.innerText = 'ACTIVE';
+            statusText.style.color = 'green';
+            statusText.style.fontWeight = 'bold';
+        } else {
+            statusText.innerText = 'INACTIVE';
+            statusText.style.color = 'red';
+            statusText.style.fontWeight = 'bold';
         }
+    }
     </script>
 </body>
