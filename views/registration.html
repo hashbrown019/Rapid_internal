@@ -1,125 +1,105 @@
-<!DOCTYPE html>
-<html lang="en">
-
 {% include 'base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Registration</title>
-
-    <style>
-        select.custom-select::placeholder {
-            font-size: 10px; 
-            color: #999; 
-            background-color: ghostwhite;
-        }
-    </style>
-</head>
+<style>
+    select.custom-select::placeholder {
+        font-size: 10px;
+        color: #999;
+        background-color: ghostwhite;
+    }
+</style>
 
 <body>
-    <div class="container mt-2">
+    <div class="container" style="margin-top: 20px;" >
         <div class="row justify-content-center">
-            <div class="col-md-10">
-                <div class="card">
-                    <div class="card-header text-center" style="background-color: #264653; color: white;">
-                        <h4>Register Here</h4>
-                    </div>
-                    <div class="card-body">
-                        <form action="submit_form.php" method="post">
-                            <div class="form-row">
-                                <div class="form-group col-md-5">
-                                    <label for="lastName">Last Name:</label>
-                                    <input type="text" class="form-control" id="lastName" name="lastName" style="background-color: ghostwhite;" placeholder="Enter Last Name" required>
-                                </div>
-
-                                <div class="form-group col-md-5">
-                                    <label for="firstName">First Name:</label>
-                        
-                                    <input type="text" class="form-control" id="firstName" name="firstName" style="background-color: ghostwhite;" placeholder="Enter First Name" required>
-                                </div>
-
-                                <div class="form-group col-md-2">
-                                    <label for="initial"> Initial: </label>
-                                    <input type="text" class="form-control" id="initial" name="Initial" style="background-color: ghostwhite;" placeholder="Initial" required>
-                                </div>
+            <div class="card" style="width: 100%;">
+                <div class="card-header text-center" style="background-color: #264653; color: white;">
+                    <h4>REGISTRATION FORM</h4>
+                </div>
+                <div class="card-body">
+                    <form id="signupForm">
+                        <div class="form-row">
+                            <div class="form-group col-md-5">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" name="lastName" style="background-color: ghostwhite;" placeholder="Enter Last Name" required>
                             </div>
 
+                            <div class="form-group col-md-5">
+                                <label for="firstName">First Name</label>
+                                <input type="text" class="form-control" id="firstName" name="firstName" style="background-color: ghostwhite;" placeholder="Enter First Name" required>
                             </div>
 
-                            <div class="form-row align-items-center col-md-12">
-                                <div class="form-group col-md-12">
-                                    <label for="streetAddress">Address:</label>
-                                    <input type="text" class="form-control" id="streetAddress" name="streetAddress" placeholder="Street Address" style="background-color: ghostwhite;" required>
-                                </div>
-                            
-                                <div class="form-group col-md-12">
-                                    <input type="text" class="form-control" id="city" name="city" placeholder="City" style="background-color: ghostwhite;">
-                                </div>
-                            
-                                <div class="form-group col-md-6">
-                                    <input type="text" class="form-control" id="state" name="state" placeholder="State" style="background-color: ghostwhite;" required>
-                                </div>
-                            
-                                <div class="form-group col-md-6">
-                                    <input type="text" class="form-control" id="zipcode" name="zipcode" placeholder="Zipcode" pattern="[0-9]+" style="background-color: ghostwhite;" required>
-                                </div>
+                            <div class="form-group col-md-2">
+                                <label for="initial"> Initial</label>
+                                <input type="text" class="form-control" id="initial" name="Initial" style="background-color: ghostwhite;" placeholder="Initial" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row align-items-center">
+                            <div class="form-group col-md-12">
+                                <label for="streetAddress">Address</label>
+                                <input type="text" class="form-control" id="streetAddress" name="streetAddress" placeholder="Street Address" style="background-color: ghostwhite;" required>
                             </div>
 
-                     <div class="card-body">
-                                <form action="submit_form.php" method="post">
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label for="email">Email:</label>
-                                            <input type="email" class="form-control" id="email" name="email" style="background-color: ghostwhite;" autocomplete="email" placeholder="Enter Email" required>
-                                        </div>
-        
-                                        <div class="form-group col-md-6">
-                                            <label for="phoneNumber">Mobile Number:</label>
-                                            <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="e.g. 0000-000-0000" required style="background-color: ghostwhite; height: 40px;" pattern="[0-9]+" maxlength="11">
-                                        </div>
-                                  
-                                </div>
-                                    
-                                    
+                            <div class="form-group col-md-12">
+                                <input type="text" class="form-control" id="city" name="city" placeholder="City" style="background-color: ghostwhite;">
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" id="state" name="state" placeholder="State" style="background-color: ghostwhite;" required>
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" id="zipcode" name="zipcode" placeholder="Zipcode" pattern="[0-9]+" style="background-color: ghostwhite;" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" style="background-color: ghostwhite;" autocomplete="email" placeholder="Enter Email" required>
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label for="phoneNumber">Mobile Number</label>
+                                <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="e.g. 0000-000-0000" required style="background-color: ghostwhite; height: 40px;" pattern="[0-9]+" maxlength="11">
+                            </div>
+                        </div>
+
                         <div class="form-group col-md-13">
-                                <label for="job">Designation:</label>
-                                <input type="job" class="form-control" id="job" name="job" style="background-color: ghostwhite;" placeholder="Enter Designation" required>
+                            <label for="designation">Designation</label>
+                            <input type="text" class="form-control" id="designation" name="designation" style="background-color: ghostwhite;" placeholder="Enter Designation" required>
+                        </div>
+
+                        <div class="form-row col-md-14">
+                            <div class="form-group col-md-6">
+                                <label for="rcu">RCU</label>
+                                <select class="form-control" id="rcu" name="rcu" style="font-size: 12px; height: 40px; background-color: ghostwhite;" onchange="updatePCUOptions()" required>
+                                    <option value="" disabled selected>Select option</option>
+                                    <option value="8">Region VIII - Eastern Visayas</option>
+                                    <option value="9">Region IX - Zamboanga Peninsula</option>
+                                    <option value="10">Region X- Northern Mindanao</option>
+                                    <option value="11">Region XI - Davao Region</option>
+                                    <option value="12">Region XII - SOCCSKSARGEN</option>
+                                    <option value="13">Region XIII - Caraga</option>
+                                </select>
                             </div>
 
-                            <body>
-
-                                    <form action="submit_form.php" method="post" onsubmit="classifyRegion(); return false;">
-                                        <div class="form-row col-md-14">
-                                            <div class="form-group col-md-6">
-                                                <label for="rcu">RCU:</label>
-                                                <select class="form-control" id="rcu" name="rcu" style="font-size: 12px; height: 40px; background-color: ghostwhite;" onchange="updatePCUOptions()" required>
-                                                    <option value="" disabled selected>Select option</option>
-                                                    <option value="8">Region VIII - Eastern Visayas</option>
-                                                    <option value="9">Region IX - Zamboanga Peninsula</option>
-                                                    <option value="10">Region X- Northern Mindanao</option>
-                                                    <option value="11">Region XI - Davao Region</option>
-                                                    <option value="12">Region XII - SOCCSKSARGEN</option>
-                                                    <option value="13">Region XIII - Caraga</option>
-                                                </select>
-                                            </div>
-                                        
-                                            <div class="form-group col-md-6">
-                                                <label for="pcu">PCU:</label>
-                                                <select class="form-control" id="pcu" name="pcu" style="font-size: 12px; height: 40px; background-color: ghostwhite;" required>
-                                                    <option value="" disabled selected>Select option</option>
-                                                </select>
-                                            </div>
-                                        </div>                                                              
-              
-                            <div class="form-group col-md-13">
-                                <label for="username">Username:</label>
-                                <input type="text" class="form-control" id="username" name="username" style="background-color: ghostwhite;" autocomplete="username" placeholder="Enter Username" required>
+                            <div class="form-group col-md-6">
+                                <label for="pcu">PCU</label>
+                                <select class="form-control" id="pcu" name="pcu" style="font-size: 12px; height: 40px; background-color: ghostwhite;" required>
+                                    <option value="" disabled selected>Select option</option>
+                                </select>
                             </div>
+                        </div>
 
-                            <div class="form-group col-md-13">
-                                <label for="password">Password:</label>
+                        <div class="form-group col-md-13">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" id="username" name="username" style="background-color: ghostwhite;" autocomplete="username" placeholder="Enter Username" required>
+                        </div>
+
+                        <div class="form-row col-md-14">
+                            <div class="form-group col-md-6">
+                                <label for="password">Password</label>
                                 <div class="input-group">
                                     <input type="password" class="form-control" id="password" style="background-color: ghostwhite;" placeholder="Enter Password" required>
                                     <div class="input-group-append">
@@ -129,11 +109,11 @@
                                     </div>
                                 </div>
                             </div>
-                            
-                            <div class="form-group col-md-13">
-                                <label for="confirmPassword">Confirm Password:</label>
+
+                            <div class="form-group col-md-6">
+                                <label for="confirmPassword">Confirm Password</label>
                                 <div class="input-group">
-                                    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"  style="background-color: ghostwhite;" placeholder="Confirm Password" required>
+                                    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" style="background-color: ghostwhite;" placeholder="Confirm Password" required>
                                     <div class="input-group-append">
                                         <button class="btn btn-outline-secondary" type="button" id="toggleconfirmPassword" onclick="__togglePassword('confirmPassword', 'eyeIcon2'); verifyPassword()">
                                             <i class="fas fa-eye" id="eyeIcon2"></i>
@@ -141,42 +121,47 @@
                                     </div>
                                 </div>
                                 <p id="passwordMatchMessage" style="color: red;"></p>
-                                
-                                <br>
-                                
-                                <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <label for="dateInput">Until:</label>
-                                        <input type="date" id="dateInput" name="dateInput" class="form-control" style="font-size: 12px; height: 40px; background-color: ghostwhite;" required>
-                                    </div>
-                                
-                                    <div class="form-group col-md-6">
-                                        <label for="dropdown">Status:</label>
-                                        <select id="dropdown" name="dropdown" class="form-control"  style="font-size: 12px; height: 40px; background-color: ghostwhite;" required>
-                                            <option value="" disabled selected>Select option</option>
-                                            <option value="option1">Option 1</option>
-                                            <option value="option2">Option 2</option>
-                                            <option value="option3">Option 3</option>
-                                        </select>
-                                    </div>
-                                </div>    
+                            </div>
                         </div>
-                        <div  class="text-right">
-                        <button type="button" class="btn btn-primary" style="width: 150px; font-size: 18px; font-weight: bold;" onclick="validateAndSubmit()">Sign Up</button>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="dateUntil">Until</label>
+                                <input type="date" id="dateUntil" name="dateUntil" class="form-control" style="font-size: 12px; height: 40px; background-color: ghostwhite;" required>
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label for="status">Status</label>
+                                <select id="status" name="status" class="form-control" style="font-size: 12px; height: 40px; background-color: ghostwhite;" required>
+                                    <option value="" disabled selected>Select option</option>
+                                    <option value="option1">Option 1</option>
+                                    <option value="option2">Option 2</option>
+                                    <option value="option3">Option 3</option>
+                                </select>
+                            </div>
                         </div>
-                      </form>
-                    </div>
+                        <div class="button-container d-flex justify-content-between">
+                            <div class="text-left">
+                                <button type="button" class="btn btn-primary" id="upload" style="width: 200px; font-size: 18px; font-weight: bold;" onclick="validateAndSubmit()">
+                                    <i class="fas fa-cloud-upload-alt" style="margin-right: 8px;"></i> Upload Image
+                                </button>
+                            </div>
+                            <div class="text-right">
+                                <button type="button" class="btn btn-primary" id="submit" style="width: 150px; font-size: 18px; font-weight: bold;" onclick="validateAndSubmit()">Sign Up</button>
+                            </div>
+                        </div>
+                        
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-
         function __togglePassword(inputId, eyeIconId) {
             var passwordInput = document.getElementById(inputId);
             var eyeIcon = document.getElementById(eyeIconId);
-    
+
             if (passwordInput.type === "password") {
                 passwordInput.type = "text";
                 eyeIcon.classList.remove("fas", "fa-eye");
@@ -184,89 +169,91 @@
             } else {
                 passwordInput.type = "password";
                 eyeIcon.classList.remove("fas", "fa-eye-slash");
-                eyeIcon.classList.add("fas","fa-eye");
+                eyeIcon.classList.add("fas", "fa-eye");
             }
         }
+
         function verifyPassword() {
-        var password = document.getElementById("password").value;
-        var confirmPassword = document.getElementById("confirmPassword").value;
-        var messageElement = document.getElementById("passwordMatchMessage");
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+            var messageElement = document.getElementById("passwordMatchMessage");
 
-        if (password === confirmPassword) {
-            messageElement.textContent = "Password match!";
-        } else {
-            messageElement.textContent = "Password does not match!";
+            if (password === confirmPassword) {
+                messageElement.textContent = "Password match!";
+            } else {
+                messageElement.textContent = "Password does not match!";
+            }
         }
-    }
-    function validateAndSubmit() {
-        var password = document.getElementById("password").value;
-        var confirmPassword = document.getElementById("confirmPassword").value;
 
-        if (password === confirmPassword) {
-            document.getElementById("signupForm").submit();
-        } else {
-            
-            alert("Passwords do not match. Please correct them.");
+        function validateAndSubmit() {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+
+            if (password === confirmPassword) {
+                document.getElementById("signupForm").submit();
+            } else {
+                alert("Passwords do not match. Please correct them.");
+            }
         }
-    }
     </script>
 
-<script>
-    function updatePCUOptions() {
-        var rcuSelect = document.getElementById('rcu');
-        var pcuSelect = document.getElementById('pcu');
-        var selectedRCU = rcuSelect.value;
+    <script>
+        function updatePCUOptions() {
+            var rcuSelect = document.getElementById('rcu');
+            var pcuSelect = document.getElementById('pcu');
+            var selectedRCU = rcuSelect.value;
 
-        // Clear previous PCU options
-        pcuSelect.innerHTML = '<option value="" disabled selected>Select option</option>';
+            // Clear previous PCU options
+            pcuSelect.innerHTML = '<option value="" disabled selected>Select option</option>';
 
-        // Add PCU options based on selected RCU
-        switch (selectedRCU) {
-            case '8': // Region VIII - Eastern Visayas
-                addOption(pcuSelect, 'BARMM', 'BARMM');
-                addOption(pcuSelect, 'maguindanao', 'Maguindanao');
-                addOption(pcuSelect, 'bukidnon', 'Bukidnon');
-                break;
+            // Add PCU options based on selected RCU
+            switch (selectedRCU) {
+                case '8': // Region VIII - Eastern Visayas
+                    addOption(pcuSelect, 'BARMM', 'BARMM');
+                    addOption(pcuSelect, 'maguindanao', 'Maguindanao');
+                    addOption(pcuSelect, 'bukidnon', 'Bukidnon');
+                    break;
 
-            case '10': // Region X - Northern Mindanao
-                addOption(pcuSelect, 'lanao del norte', 'Lanao del Norte');
-                addOption(pcuSelect, 'lanao del sur', 'Lanao del Sur');
-                break;
+                case '10': // Region X - Northern Mindanao
+                    addOption(pcuSelect, 'lanao del norte', 'Lanao del Norte');
+                    addOption(pcuSelect, 'lanao del sur', 'Lanao del Sur');
+                    break;
 
-            case '11': // Region XI - Davao Region
-                addOption(pcuSelect, 'davao oriental', 'Davao Oriental');
-                addOption(pcuSelect, 'davao del norte', 'Davao del Norte');
-                addOption(pcuSelect, 'davao del sur', 'Davao del Sur');
-                addOption(pcuSelect, 'davao occidental', 'Davao Occidental');
-                break;
+                case '11': // Region XI - Davao Region
+                    addOption(pcuSelect, 'davao oriental', 'Davao Oriental');
+                    addOption(pcuSelect, 'davao del norte', 'Davao del Norte');
+                    addOption(pcuSelect, 'davao del sur', 'Davao del Sur');
+                    addOption(pcuSelect, 'davao occidental', 'Davao Occidental');
+                    break;
 
-            case '12': // Region XII - SOCCSKSARGEN
-                addOption(pcuSelect, 'north cotobato', 'North Cotobato');
-                addOption(pcuSelect, 'sultan kudarat', 'Sultan Kudarat');
-                addOption(pcuSelect, 'sarangani', 'Sarangani');
-                break;
+                case '12': // Region XII - SOCCSKSARGEN
+                    addOption(pcuSelect, 'north cotobato', 'North Cotobato');
+                    addOption(pcuSelect, 'sultan kudarat', 'Sultan Kudarat');
+                    addOption(pcuSelect, 'sarangani', 'Sarangani');
+                    break;
 
-            case '13': // Region XIII - Caraga
-                addOption(pcuSelect, 'agusan del norte', 'Agusan del Norte');
-                addOption(pcuSelect, 'agusan del sur', 'Agusan del Sur');
-                addOption(pcuSelect, 'surigao del sur', 'Surigao del Sur');
-                break;
+                case '13': // Region XIII - Caraga
+                    addOption(pcuSelect, 'agusan del norte', 'Agusan del Norte');
+                    addOption(pcuSelect, 'agusan del sur', 'Agusan del Sur');
+                    addOption(pcuSelect, 'surigao del sur', 'Surigao del Sur');
+                    break;
 
-            case '9': // Region IX - Zamboanga Peninsula
-                addOption(pcuSelect, 'zamboanga del norte', 'Zamboanga del Norte');
-                addOption(pcuSelect, 'zambuanga sibugay', 'Zamboanga Sibugay');
-                addOption(pcuSelect, 'zamboanga del sur', 'Zamboanga del Sur');
-                break;
+                case '9': // Region IX - Zamboanga Peninsula
+                    addOption(pcuSelect, 'zamboanga del norte', 'Zamboanga del Norte');
+                    addOption(pcuSelect, 'zambuanga sibugay', 'Zamboanga Sibugay');
+                    addOption(pcuSelect, 'zamboanga del sur', 'Zamboanga del Sur');
+                    break;
+            }
         }
-    }
 
-    function addOption(selectElement, value, text) {
-        var option = document.createElement('option');
-        option.value = value;
-        option.text = text;
-        selectElement.add(option);
-    }
-</script>
+        function addOption(selectElement, value, text) {
+            var option = document.createElement('option');
+            option.value = value;
+            option.text = text;
+            selectElement.add(option);
+        }
+    </script>
 
 </body>
+
 </html>

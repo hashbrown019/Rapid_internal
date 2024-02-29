@@ -9,31 +9,37 @@
                     <div>
                         <div class="card-body">
                             <div class="text-center mb-4" style="margin-bottom: 1rem!important;">
-                                <h4 style="background-color: #264653; color: #fff; padding: 10px;">REGISTRATION</h4>
+                                <h4 id="registrationHeader" style="background-color: #264653; color: #fff; padding: 10px;">REGISTRATION</h4>
                             </div>  
                             <div class="card">
                                 <div class="card-body">
                                     <div class="text-center mb-4 border-div">
-                                        <h5 style="color: #264653; padding: 10px; margin-bottom: 0;">TABLE LIST</h5>
+                                        <h5 id="tableListHeader" style="color: #264653; padding: 10px; margin-bottom: 0;">TABLE LIST</h5>
                                     </div>                                    
                                     <div class="table-responsive">
-                                        <table class="table">
+                                        <table id="dataTable" class="table">
                                             <thead>
                                                 <tr>
-                                                    <th class="text-center">Name</th>
-                                                    <th class="text-center">RCU</th>
-                                                    <th class="text-center">PCU</th>
-                                                    <th class="text-center">DESIGNATION</th>
-                                                    <th class="text-center">STATUS</th>
+                                                    <th id="imageHeader" class="text-center">IMAGE</th>
+                                                    <th id="nameHeader" class="text-center">Name</th>
+                                                    <th id="rcuHeader" class="text-center">RCU</th>
+                                                    <th id="pcuHeader" class="text-center">PCU</th>
+                                                    <th id="designationHeader" class="text-center">DESIGNATION</th>
+                                                    <th id="statusHeader" class="text-center">STATUS</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td class="text-center">Dee T. Ayye</td>
-                                                    <td class="text-center">Region XIII - Caraga</td>
-                                                    <td class="text-center">Surigao del Sur</td>
-                                                    <td class="text-center">Developer</td>
-                                                    <td class="text-center">
+                                                    <td id="profileImageCell" class="text-center">
+                                                        <div class="profile-image-container">
+                                                            <img src="https://pixlr.com/images/index/ai-image-generator-one.webp" alt="Profile Image" class="profile-image">
+                                                        </div>
+                                                    </td>
+                                                    <td id="nameCell" class="text-center">Dee T. Ayye</td>
+                                                    <td id="rcuCell" class="text-center">Region XIII - Caraga</td>
+                                                    <td id="pcuCell" class="text-center">Surigao del Sur</td>
+                                                    <td id="designationCell" class="text-center">Developer</td>
+                                                    <td id="statusCell" class="text-center">
                                                         <div class="status-container">
                                                             <input id="statusSwitch" checked="true" type="checkbox" class="switch" onchange="updateStatus()">
                                                             <span id="statusText">ACTIVE</span>
@@ -51,7 +57,6 @@
             </div>
         </div>                
     </div>
-    
 
         <script type="text/javascript">
     document.getElementById("sidebarCollapse").addEventListener("click", function() {
