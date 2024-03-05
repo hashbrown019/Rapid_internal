@@ -5,6 +5,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     background: #eaeaea;
+    min-height: 100vh;
 }
 
 p {
@@ -334,12 +335,10 @@ table {
 
 }
 
-
-
 #statusText {
     font-weight: bold;
     font-size: 13px;
-    width: 70px; /* Adjust the width as needed */
+    width: 70px;
     display: inline-block;
     text-align: center;
    
@@ -411,4 +410,3 @@ table {
     height: 100%;
     object-fit: cover;
 }
-
