@@ -5,6 +5,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     background: #eaeaea;
+    min-height: 100vh;
 }
 
 p {
@@ -317,7 +318,7 @@ table {
 .switch {
     position: relative;
     height: 1.5rem;
-    width: 3.4rem;
+    width: 3.5rem;
     cursor: pointer;
     appearance: none;
     -webkit-appearance: none;
@@ -334,12 +335,10 @@ table {
 
 }
 
-
-
 #statusText {
     font-weight: bold;
     font-size: 13px;
-    width: 70px; /* Adjust the width as needed */
+    width: 70px;
     display: inline-block;
     text-align: center;
    
@@ -356,7 +355,7 @@ table {
 .switch::before {
     position: absolute;
     content: "";
-    left: calc(2rem - 2rem);
+    left: calc(2.1rem - 2rem);
     top: calc(1.5rem - 1.6rem);
     display: block;
     height: 1.7rem;
@@ -381,7 +380,6 @@ table {
     transform: translateX(100%);
     border-color: rgba(77, 175, 80, 1);
 }
-
 @media (max-width: 768px) {
     .status-container {
         flex-direction: column;
@@ -394,6 +392,21 @@ table {
     }
 
     .switch {
-        margin-top: 5px; /* Adjust the margin-top as needed */
+        margin-top: 5px; 
     }
+}
+
+.profile-image-container {
+    width: 35px; 
+    height: 35px; 
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 auto;
+    background-color: #b1b1b1;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

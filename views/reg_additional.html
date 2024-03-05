@@ -59,36 +59,38 @@
     </div>
 
         <script type="text/javascript">
-    document.getElementById("sidebarCollapse").addEventListener("click", function() {
-        document.getElementById("sidebar").classList.toggle("active");
-        closeAllSubmenus();
-    });
+                    
+            document.getElementById("sidebarCollapse").addEventListener("click", function() {
+                document.getElementById("sidebar").classList.toggle("active");
+                closeAllSubmenus();
+            });
 
-    document.querySelectorAll('.list-unstyled.components .dropdown-toggle').forEach(function(item) {
-        item.addEventListener('click', function() {
-            document.getElementById("sidebar").classList.add("active");
-        });
-    });
+            document.querySelectorAll('.list-unstyled.components .dropdown-toggle').forEach(function(item) {
+                item.addEventListener('click', function() {
+                    document.getElementById("sidebar").classList.add("active");
+                });
+            });
 
-    function closeAllSubmenus() {
-        document.querySelectorAll("#sidebar .collapse.show").forEach(function(element) {
-            element.classList.remove("show");
-        });
-    }
-  
-    function updateStatus() {
-        var statusSwitch = document.getElementById('statusSwitch');
-        var statusText = document.getElementById('statusText');
+            function closeAllSubmenus() {
+                document.querySelectorAll("#sidebar .collapse.show").forEach(function(element) {
+                    element.classList.remove("show");
+                });
+            }
+        
+            function updateStatus() {
+                var statusSwitch = document.getElementById('statusSwitch');
+                var statusText = document.getElementById('statusText');
 
-        if (statusSwitch.checked) {
-            statusText.innerText = 'ACTIVE';
-            statusText.style.color = 'green';
-            statusText.style.fontWeight = 'bold';
-        } else {
-            statusText.innerText = 'INACTIVE';
-            statusText.style.color = 'red';
-            statusText.style.fontWeight = 'bold';
-        }
-    }
+                if (statusSwitch.checked) {
+                    statusText.innerText = 'ACTIVE';
+                    statusText.style.color = 'green';
+                    statusText.style.fontWeight = 'bold';
+                } else {
+                    statusText.innerText = 'INACTIVE';
+                    statusText.style.color = 'red';
+                    statusText.style.fontWeight = 'bold';
+                }
+            }
+            
     </script>
 </body>
